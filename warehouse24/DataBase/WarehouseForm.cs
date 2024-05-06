@@ -96,9 +96,29 @@ namespace warehouse24.DataBase
             }
             else
             {
-                toolStripStatusLabel1.Text = "Please Delete the WareHouse Name";
+                toolStripStatusLabel1.Text = "Please Add the WareHouse Name That you want to Delete ";
             }
 
+        }
+
+        private void butEditWareHouse_Click(object sender, EventArgs e)
+        {
+            if (textBoxNameWareHouse.Text != "" && (int)numericUpDownId.Value != 0)
+            {
+                string newWareHouseName = textBoxNameWareHouse.Text;
+                int idWareHouse = (int)numericUpDownId.Value;
+                ORM orm = new ORM();
+                orm.EditWarehouse(idWareHouse, newWareHouseName);
+                toolStripStatusLabel1.Text = newWareHouseName + "HaS BEEN Edit";
+                WarehouseForm warehouse = new WarehouseForm();
+                warehouse.StartPosition = FormStartPosition.CenterScreen;
+                warehouse.Show();
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the WareHouse Name and ID";
+            }
         }
     }
     

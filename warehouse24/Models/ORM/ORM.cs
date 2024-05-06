@@ -228,6 +228,30 @@ namespace warehouse24
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void EditWarehouse(int idWarehouse, string newName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "UPDATE Warehouse SET Name = @NewName WHERE id = @Id";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", idWarehouse);
+                        command.Parameters.AddWithValue("@NewName", newName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }  
    
 }

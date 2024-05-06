@@ -46,10 +46,13 @@
             this.warehouseTableAdapter = new warehouse24.warehouse24DataSetTableAdapters.WarehouseTableAdapter();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDownId = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).BeginInit();
             this.SuspendLayout();
             // 
             // butAddWareHouse
@@ -89,6 +92,7 @@
             this.butEditWareHouse.TabIndex = 2;
             this.butEditWareHouse.Text = "Edit WareHouse";
             this.butEditWareHouse.UseVisualStyleBackColor = true;
+            this.butEditWareHouse.Click += new System.EventHandler(this.butEditWareHouse_Click);
             // 
             // labelWAREHOUSE
             // 
@@ -150,7 +154,7 @@
             // 
             // textBoxNameWareHouse
             // 
-            this.textBoxNameWareHouse.Location = new System.Drawing.Point(122, 294);
+            this.textBoxNameWareHouse.Location = new System.Drawing.Point(131, 316);
             this.textBoxNameWareHouse.Name = "textBoxNameWareHouse";
             this.textBoxNameWareHouse.Size = new System.Drawing.Size(216, 20);
             this.textBoxNameWareHouse.TabIndex = 8;
@@ -158,7 +162,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 294);
+            this.label1.Location = new System.Drawing.Point(18, 316);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 16;
@@ -203,12 +207,30 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(36, 17);
             this.toolStripStatusLabel1.Text = "Read!";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(83, 293);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Id";
+            // 
+            // numericUpDownId
+            // 
+            this.numericUpDownId.Location = new System.Drawing.Point(131, 293);
+            this.numericUpDownId.Name = "numericUpDownId";
+            this.numericUpDownId.Size = new System.Drawing.Size(71, 20);
+            this.numericUpDownId.TabIndex = 21;
+            // 
             // WarehouseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(475, 476);
+            this.Controls.Add(this.numericUpDownId);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.butSearch);
@@ -228,6 +250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +275,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown numericUpDownId;
     }
 }
