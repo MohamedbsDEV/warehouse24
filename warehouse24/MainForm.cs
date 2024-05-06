@@ -24,7 +24,7 @@ namespace warehouse24
             butDataBase.Visible = !butConectDB.Visible;
             butReport.Visible = !butConectDB.Visible;
 
-            toolStripStatusLabel1.Text = "Ready!!";
+            toolStripStatusLabel2.Text = "Ready";
         }
 
         private void buttClose_Click(object sender, EventArgs e)
@@ -42,12 +42,12 @@ namespace warehouse24
                     if (conn != null)
                     {
                         ShowButton();
-                        toolStripStatusLabel1.Text = "Connected To DB!!";
+                        toolStripStatusLabel2.Text = "Connected To DB!!";
                     }
                     else
                     {
 
-                        toolStripStatusLabel1.Text = "Disconnected to DB!!";
+                        toolStripStatusLabel2.Text = "Disconnected to DB!!";
                     }
 
                 }
@@ -62,7 +62,8 @@ namespace warehouse24
         private void butDataBase_Click(object sender, EventArgs e)
         {
             DataBaseForm dataBase = new DataBaseForm();
-            dataBase.ShowDialog();
+            dataBase.Show();
+            this.Hide();
         }
 
         private void butInvoices_Click(object sender, EventArgs e)

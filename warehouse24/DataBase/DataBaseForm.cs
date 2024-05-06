@@ -36,12 +36,6 @@ namespace warehouse24
         }
 
         
-
-        private void butInvoices_Click(object sender, EventArgs e)
-        {
-            ShowForm(typeof(InvoicesForm));
-        }
-
         private void butShipment_Click(object sender, EventArgs e)
         {
             ShowForm(typeof(ShipmentForm));
@@ -62,6 +56,7 @@ namespace warehouse24
         {
             ShowForm(typeof(ShipmentCompany));
         }
+
         //methode to show window
         private void ShowForm(Type window)
         {
@@ -73,8 +68,12 @@ namespace warehouse24
 
         private void butBack_Click(object sender, EventArgs e)
         {
-            
-            this.Close();
+            MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                mainForm.Show();
+                this.Close();
+            }
         }
     }
 }

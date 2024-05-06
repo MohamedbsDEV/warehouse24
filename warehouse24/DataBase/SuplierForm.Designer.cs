@@ -59,7 +59,7 @@
             this.labelSUPLIER.AutoSize = true;
             this.labelSUPLIER.BackColor = System.Drawing.Color.Transparent;
             this.labelSUPLIER.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSUPLIER.Location = new System.Drawing.Point(511, 9);
+            this.labelSUPLIER.Location = new System.Drawing.Point(12, 9);
             this.labelSUPLIER.Name = "labelSUPLIER";
             this.labelSUPLIER.Size = new System.Drawing.Size(86, 20);
             this.labelSUPLIER.TabIndex = 3;
@@ -70,9 +70,9 @@
             this.butBackSuplier.BackColor = System.Drawing.Color.Transparent;
             this.butBackSuplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBackSuplier.FlatAppearance.BorderSize = 0;
-            this.butBackSuplier.Location = new System.Drawing.Point(12, 394);
+            this.butBackSuplier.Location = new System.Drawing.Point(12, 378);
             this.butBackSuplier.Name = "butBackSuplier";
-            this.butBackSuplier.Size = new System.Drawing.Size(75, 23);
+            this.butBackSuplier.Size = new System.Drawing.Size(135, 31);
             this.butBackSuplier.TabIndex = 4;
             this.butBackSuplier.Text = "Back";
             this.butBackSuplier.UseVisualStyleBackColor = false;
@@ -83,7 +83,7 @@
             this.labelSuplierPhotos.AutoSize = true;
             this.labelSuplierPhotos.BackColor = System.Drawing.Color.Transparent;
             this.labelSuplierPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSuplierPhotos.Location = new System.Drawing.Point(725, 9);
+            this.labelSuplierPhotos.Location = new System.Drawing.Point(725, 60);
             this.labelSuplierPhotos.Name = "labelSuplierPhotos";
             this.labelSuplierPhotos.Size = new System.Drawing.Size(126, 20);
             this.labelSuplierPhotos.TabIndex = 8;
@@ -103,7 +103,7 @@
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.supplierBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(-2, -3);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(469, 267);
             this.dataGridView1.TabIndex = 9;
@@ -133,9 +133,9 @@
             // butImagePath
             // 
             this.butImagePath.BackColor = System.Drawing.Color.Transparent;
-            this.butImagePath.Location = new System.Drawing.Point(649, 244);
+            this.butImagePath.Location = new System.Drawing.Point(539, 264);
             this.butImagePath.Name = "butImagePath";
-            this.butImagePath.Size = new System.Drawing.Size(84, 23);
+            this.butImagePath.Size = new System.Drawing.Size(97, 23);
             this.butImagePath.TabIndex = 10;
             this.butImagePath.Text = "Import Image ";
             this.butImagePath.UseVisualStyleBackColor = false;
@@ -143,30 +143,30 @@
             // butSearch
             // 
             this.butSearch.BackColor = System.Drawing.Color.Transparent;
-            this.butSearch.Location = new System.Drawing.Point(27, 296);
+            this.butSearch.Location = new System.Drawing.Point(9, 40);
             this.butSearch.Name = "butSearch";
-            this.butSearch.Size = new System.Drawing.Size(75, 23);
+            this.butSearch.Size = new System.Drawing.Size(142, 23);
             this.butSearch.TabIndex = 11;
             this.butSearch.Text = "Search";
             this.butSearch.UseVisualStyleBackColor = false;
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(181, 299);
+            this.textBoxSearch.Location = new System.Drawing.Point(163, 43);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(246, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(313, 20);
             this.textBoxSearch.TabIndex = 12;
             // 
             // textBoxImagePath
             // 
-            this.textBoxImagePath.Location = new System.Drawing.Point(759, 244);
+            this.textBoxImagePath.Location = new System.Drawing.Point(649, 266);
             this.textBoxImagePath.Name = "textBoxImagePath";
-            this.textBoxImagePath.Size = new System.Drawing.Size(168, 20);
+            this.textBoxImagePath.Size = new System.Drawing.Size(239, 20);
             this.textBoxImagePath.TabIndex = 13;
             // 
             // textBoxNameSuplir
             // 
-            this.textBoxNameSuplir.Location = new System.Drawing.Point(181, 338);
+            this.textBoxNameSuplir.Location = new System.Drawing.Point(649, 306);
             this.textBoxNameSuplir.Name = "textBoxNameSuplir";
             this.textBoxNameSuplir.Size = new System.Drawing.Size(246, 20);
             this.textBoxNameSuplir.TabIndex = 14;
@@ -175,16 +175,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 338);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(539, 306);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 20);
+            this.label1.Size = new System.Drawing.Size(97, 18);
             this.label1.TabIndex = 15;
             this.label1.Text = "Suplier Name";
             // 
             // pictureBoxSuplierImage
             // 
-            this.pictureBoxSuplierImage.Location = new System.Drawing.Point(649, 32);
+            this.pictureBoxSuplierImage.Location = new System.Drawing.Point(649, 83);
             this.pictureBoxSuplierImage.Name = "pictureBoxSuplierImage";
             this.pictureBoxSuplierImage.Size = new System.Drawing.Size(239, 175);
             this.pictureBoxSuplierImage.TabIndex = 7;
@@ -231,7 +231,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 429);
+            this.ClientSize = new System.Drawing.Size(939, 433);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNameSuplir);
             this.Controls.Add(this.textBoxImagePath);

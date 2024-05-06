@@ -52,9 +52,9 @@
             this.butAddShipmentCompany.BackColor = System.Drawing.Color.Transparent;
             this.butAddShipmentCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butAddShipmentCompany.FlatAppearance.BorderSize = 0;
-            this.butAddShipmentCompany.Location = new System.Drawing.Point(302, 337);
+            this.butAddShipmentCompany.Location = new System.Drawing.Point(14, 365);
             this.butAddShipmentCompany.Name = "butAddShipmentCompany";
-            this.butAddShipmentCompany.Size = new System.Drawing.Size(144, 45);
+            this.butAddShipmentCompany.Size = new System.Drawing.Size(183, 29);
             this.butAddShipmentCompany.TabIndex = 0;
             this.butAddShipmentCompany.Text = "Add Shipment Company";
             this.butAddShipmentCompany.UseVisualStyleBackColor = false;
@@ -64,9 +64,9 @@
             this.butEditShipmentCompany.BackColor = System.Drawing.Color.Transparent;
             this.butEditShipmentCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butEditShipmentCompany.FlatAppearance.BorderSize = 0;
-            this.butEditShipmentCompany.Location = new System.Drawing.Point(644, 337);
+            this.butEditShipmentCompany.Location = new System.Drawing.Point(12, 437);
             this.butEditShipmentCompany.Name = "butEditShipmentCompany";
-            this.butEditShipmentCompany.Size = new System.Drawing.Size(144, 45);
+            this.butEditShipmentCompany.Size = new System.Drawing.Size(183, 29);
             this.butEditShipmentCompany.TabIndex = 1;
             this.butEditShipmentCompany.Text = "EditShipmentCompany";
             this.butEditShipmentCompany.UseVisualStyleBackColor = false;
@@ -76,9 +76,9 @@
             this.butDeleteShipmentCompany.BackColor = System.Drawing.Color.Transparent;
             this.butDeleteShipmentCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butDeleteShipmentCompany.FlatAppearance.BorderSize = 0;
-            this.butDeleteShipmentCompany.Location = new System.Drawing.Point(472, 336);
+            this.butDeleteShipmentCompany.Location = new System.Drawing.Point(12, 401);
             this.butDeleteShipmentCompany.Name = "butDeleteShipmentCompany";
-            this.butDeleteShipmentCompany.Size = new System.Drawing.Size(144, 46);
+            this.butDeleteShipmentCompany.Size = new System.Drawing.Size(183, 30);
             this.butDeleteShipmentCompany.TabIndex = 2;
             this.butDeleteShipmentCompany.Text = "Delete Shipment Company";
             this.butDeleteShipmentCompany.UseVisualStyleBackColor = false;
@@ -88,7 +88,7 @@
             this.butBack.BackColor = System.Drawing.Color.Transparent;
             this.butBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBack.FlatAppearance.BorderSize = 0;
-            this.butBack.Location = new System.Drawing.Point(37, 369);
+            this.butBack.Location = new System.Drawing.Point(25, 488);
             this.butBack.Name = "butBack";
             this.butBack.Size = new System.Drawing.Size(98, 23);
             this.butBack.TabIndex = 3;
@@ -139,7 +139,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(435, 87);
+            this.label1.Location = new System.Drawing.Point(11, 332);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 13);
             this.label1.TabIndex = 6;
@@ -147,16 +147,16 @@
             // 
             // textBoxNameShipmentCompany
             // 
-            this.textBoxNameShipmentCompany.Location = new System.Drawing.Point(570, 80);
+            this.textBoxNameShipmentCompany.Location = new System.Drawing.Point(146, 325);
             this.textBoxNameShipmentCompany.Name = "textBoxNameShipmentCompany";
-            this.textBoxNameShipmentCompany.Size = new System.Drawing.Size(218, 20);
+            this.textBoxNameShipmentCompany.Size = new System.Drawing.Size(242, 20);
             this.textBoxNameShipmentCompany.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 20);
+            this.label2.Location = new System.Drawing.Point(8, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 24);
             this.label2.TabIndex = 8;
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 404);
+            this.ClientSize = new System.Drawing.Size(471, 571);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxNameShipmentCompany);
             this.Controls.Add(this.label1);

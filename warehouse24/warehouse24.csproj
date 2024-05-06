@@ -71,12 +71,6 @@
     <Compile Include="DataBase\GoodsForm.Designer.cs">
       <DependentUpon>GoodsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataBase\InvoicesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DataBase\InvoicesForm.Designer.cs">
-      <DependentUpon>InvoicesForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataBase\ShipmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,9 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataBase\GoodsForm.resx">
       <DependentUpon>GoodsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataBase\InvoicesForm.resx">
-      <DependentUpon>InvoicesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataBase\ShipmentForm.resx">
       <DependentUpon>ShipmentForm.cs</DependentUpon>

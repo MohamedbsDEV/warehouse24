@@ -45,18 +45,19 @@
             this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxGoodsName = new System.Windows.Forms.TextBox();
             this.goodsTableAdapter = new warehouse24.warehouse24DataSetTableAdapters.GoodsTableAdapter();
-            this.textBoxGoodsCost = new System.Windows.Forms.TextBox();
             this.textBoxImagePath = new System.Windows.Forms.TextBox();
             this.butImagePath = new System.Windows.Forms.Button();
             this.textBoxSearchGoods = new System.Windows.Forms.TextBox();
             this.butSearchGoods = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDownGoodCost = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGoods)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGoodCost)).BeginInit();
             this.SuspendLayout();
             // 
             // butAddGoods
@@ -193,13 +194,6 @@
             // 
             this.goodsTableAdapter.ClearBeforeFill = true;
             // 
-            // textBoxGoodsCost
-            // 
-            this.textBoxGoodsCost.Location = new System.Drawing.Point(97, 305);
-            this.textBoxGoodsCost.Name = "textBoxGoodsCost";
-            this.textBoxGoodsCost.Size = new System.Drawing.Size(299, 20);
-            this.textBoxGoodsCost.TabIndex = 12;
-            // 
             // textBoxImagePath
             // 
             this.textBoxImagePath.Location = new System.Drawing.Point(536, 238);
@@ -251,18 +245,25 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Good  cost";
             // 
+            // numericUpDownGoodCost
+            // 
+            this.numericUpDownGoodCost.Location = new System.Drawing.Point(97, 310);
+            this.numericUpDownGoodCost.Name = "numericUpDownGoodCost";
+            this.numericUpDownGoodCost.Size = new System.Drawing.Size(57, 20);
+            this.numericUpDownGoodCost.TabIndex = 19;
+            // 
             // GoodsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 444);
+            this.Controls.Add(this.numericUpDownGoodCost);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSearchGoods);
             this.Controls.Add(this.butSearchGoods);
             this.Controls.Add(this.textBoxImagePath);
             this.Controls.Add(this.butImagePath);
-            this.Controls.Add(this.textBoxGoodsCost);
             this.Controls.Add(this.textBoxGoodsName);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBoxGoods);
@@ -280,6 +281,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGoodCost)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,7 +304,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBoxGoodsCost;
         private System.Windows.Forms.TextBox textBoxImagePath;
         private System.Windows.Forms.Button butImagePath;
         private System.Windows.Forms.TextBox textBoxSearchGoods;
@@ -310,5 +311,6 @@
         private System.Windows.Forms.BindingSource goodsBindingSource1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown numericUpDownGoodCost;
     }
 }

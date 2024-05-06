@@ -41,15 +41,12 @@
             this.warehouse24DataSet = new warehouse24.warehouse24DataSet();
             this.warehouseTableAdapter = new warehouse24.warehouse24DataSetTableAdapters.WarehouseTableAdapter();
             this.textBoxNameWareHouse = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelPhotoWareHouse = new System.Windows.Forms.Label();
-            this.textBoxImagePath = new System.Windows.Forms.TextBox();
-            this.butImagePath = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.butSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // butAddWareHouse
@@ -57,7 +54,7 @@
             this.butAddWareHouse.BackColor = System.Drawing.Color.Transparent;
             this.butAddWareHouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butAddWareHouse.FlatAppearance.BorderSize = 0;
-            this.butAddWareHouse.Location = new System.Drawing.Point(374, 327);
+            this.butAddWareHouse.Location = new System.Drawing.Point(12, 342);
             this.butAddWareHouse.Name = "butAddWareHouse";
             this.butAddWareHouse.Size = new System.Drawing.Size(124, 35);
             this.butAddWareHouse.TabIndex = 0;
@@ -70,7 +67,7 @@
             this.butdeleteWareHouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butdeleteWareHouse.FlatAppearance.BorderSize = 0;
             this.butdeleteWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.butdeleteWareHouse.Location = new System.Drawing.Point(655, 327);
+            this.butdeleteWareHouse.Location = new System.Drawing.Point(293, 342);
             this.butdeleteWareHouse.Name = "butdeleteWareHouse";
             this.butdeleteWareHouse.Size = new System.Drawing.Size(123, 35);
             this.butdeleteWareHouse.TabIndex = 1;
@@ -81,7 +78,7 @@
             // 
             this.butEditWareHouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butEditWareHouse.FlatAppearance.BorderSize = 0;
-            this.butEditWareHouse.Location = new System.Drawing.Point(513, 327);
+            this.butEditWareHouse.Location = new System.Drawing.Point(151, 342);
             this.butEditWareHouse.Name = "butEditWareHouse";
             this.butEditWareHouse.Size = new System.Drawing.Size(123, 35);
             this.butEditWareHouse.TabIndex = 2;
@@ -92,7 +89,7 @@
             // 
             this.labelWAREHOUSE.AutoSize = true;
             this.labelWAREHOUSE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWAREHOUSE.Location = new System.Drawing.Point(411, 9);
+            this.labelWAREHOUSE.Location = new System.Drawing.Point(12, 9);
             this.labelWAREHOUSE.Name = "labelWAREHOUSE";
             this.labelWAREHOUSE.Size = new System.Drawing.Size(87, 13);
             this.labelWAREHOUSE.TabIndex = 3;
@@ -102,7 +99,7 @@
             // 
             this.butBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBack.FlatAppearance.BorderSize = 0;
-            this.butBack.Location = new System.Drawing.Point(12, 337);
+            this.butBack.Location = new System.Drawing.Point(15, 418);
             this.butBack.Name = "butBack";
             this.butBack.Size = new System.Drawing.Size(95, 25);
             this.butBack.TabIndex = 4;
@@ -118,7 +115,7 @@
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.warehouseBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 25);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(404, 193);
             this.dataGridView1.TabIndex = 7;
@@ -152,65 +149,47 @@
             // 
             // textBoxNameWareHouse
             // 
-            this.textBoxNameWareHouse.Location = new System.Drawing.Point(147, 239);
+            this.textBoxNameWareHouse.Location = new System.Drawing.Point(122, 294);
             this.textBoxNameWareHouse.Name = "textBoxNameWareHouse";
-            this.textBoxNameWareHouse.Size = new System.Drawing.Size(227, 20);
+            this.textBoxNameWareHouse.Size = new System.Drawing.Size(216, 20);
             this.textBoxNameWareHouse.TabIndex = 8;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(540, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(248, 171);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // labelPhotoWareHouse
-            // 
-            this.labelPhotoWareHouse.AutoSize = true;
-            this.labelPhotoWareHouse.Location = new System.Drawing.Point(599, 21);
-            this.labelPhotoWareHouse.Name = "labelPhotoWareHouse";
-            this.labelPhotoWareHouse.Size = new System.Drawing.Size(95, 13);
-            this.labelPhotoWareHouse.TabIndex = 10;
-            this.labelPhotoWareHouse.Text = "Photo WareHouse";
-            // 
-            // textBoxImagePath
-            // 
-            this.textBoxImagePath.Location = new System.Drawing.Point(572, 217);
-            this.textBoxImagePath.Name = "textBoxImagePath";
-            this.textBoxImagePath.Size = new System.Drawing.Size(216, 20);
-            this.textBoxImagePath.TabIndex = 15;
-            // 
-            // butImagePath
-            // 
-            this.butImagePath.Location = new System.Drawing.Point(462, 217);
-            this.butImagePath.Name = "butImagePath";
-            this.butImagePath.Size = new System.Drawing.Size(88, 23);
-            this.butImagePath.TabIndex = 14;
-            this.butImagePath.Text = "Image Path";
-            this.butImagePath.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 239);
+            this.label1.Location = new System.Drawing.Point(9, 294);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 16;
             this.label1.Text = "WareHouse Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(166, 54);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(250, 20);
+            this.textBoxSearch.TabIndex = 18;
+            // 
+            // butSearch
+            // 
+            this.butSearch.BackColor = System.Drawing.Color.Transparent;
+            this.butSearch.Location = new System.Drawing.Point(12, 51);
+            this.butSearch.Name = "butSearch";
+            this.butSearch.Size = new System.Drawing.Size(142, 23);
+            this.butSearch.TabIndex = 17;
+            this.butSearch.Text = "Search";
+            this.butSearch.UseVisualStyleBackColor = false;
+            // 
             // WarehouseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(838, 390);
+            this.ClientSize = new System.Drawing.Size(475, 458);
+            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.butSearch);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxImagePath);
-            this.Controls.Add(this.butImagePath);
-            this.Controls.Add(this.labelPhotoWareHouse);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxNameWareHouse);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.butBack);
@@ -224,7 +203,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,10 +222,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox textBoxNameWareHouse;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelPhotoWareHouse;
-        private System.Windows.Forms.TextBox textBoxImagePath;
-        private System.Windows.Forms.Button butImagePath;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button butSearch;
     }
 }

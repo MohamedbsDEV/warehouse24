@@ -30,13 +30,11 @@
         {
             this.butGoods = new System.Windows.Forms.Button();
             this.butConsumer = new System.Windows.Forms.Button();
-            this.butInvoices = new System.Windows.Forms.Button();
             this.butShipment = new System.Windows.Forms.Button();
             this.butSuplier = new System.Windows.Forms.Button();
             this.butWareHouse = new System.Windows.Forms.Button();
             this.labelGoods = new System.Windows.Forms.Label();
             this.labelConsumer = new System.Windows.Forms.Label();
-            this.labelInvoices = new System.Windows.Forms.Label();
             this.labelShipment = new System.Windows.Forms.Label();
             this.labelSuplier = new System.Windows.Forms.Label();
             this.labelWareHouse = new System.Windows.Forms.Label();
@@ -47,9 +45,11 @@
             // 
             // butGoods
             // 
-            this.butGoods.BackColor = System.Drawing.Color.White;
+            this.butGoods.BackColor = System.Drawing.Color.DodgerBlue;
             this.butGoods.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butGoods.FlatAppearance.BorderSize = 0;
+            this.butGoods.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butGoods.ForeColor = System.Drawing.Color.Linen;
             this.butGoods.Location = new System.Drawing.Point(248, 126);
             this.butGoods.Name = "butGoods";
             this.butGoods.Size = new System.Drawing.Size(182, 40);
@@ -60,9 +60,11 @@
             // 
             // butConsumer
             // 
-            this.butConsumer.BackColor = System.Drawing.Color.White;
+            this.butConsumer.BackColor = System.Drawing.Color.DodgerBlue;
             this.butConsumer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butConsumer.FlatAppearance.BorderSize = 0;
+            this.butConsumer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butConsumer.ForeColor = System.Drawing.Color.Linen;
             this.butConsumer.Location = new System.Drawing.Point(17, 128);
             this.butConsumer.Name = "butConsumer";
             this.butConsumer.Size = new System.Drawing.Size(175, 40);
@@ -71,27 +73,16 @@
             this.butConsumer.UseVisualStyleBackColor = false;
             this.butConsumer.Click += new System.EventHandler(this.butConsumer_Click);
             // 
-            // butInvoices
-            // 
-            this.butInvoices.BackColor = System.Drawing.Color.White;
-            this.butInvoices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butInvoices.FlatAppearance.BorderSize = 0;
-            this.butInvoices.Location = new System.Drawing.Point(569, 39);
-            this.butInvoices.Name = "butInvoices";
-            this.butInvoices.Size = new System.Drawing.Size(182, 38);
-            this.butInvoices.TabIndex = 2;
-            this.butInvoices.Text = "Invoices";
-            this.butInvoices.UseVisualStyleBackColor = false;
-            this.butInvoices.Click += new System.EventHandler(this.butInvoices_Click);
-            // 
             // butShipment
             // 
-            this.butShipment.BackColor = System.Drawing.Color.White;
+            this.butShipment.BackColor = System.Drawing.Color.DodgerBlue;
             this.butShipment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butShipment.FlatAppearance.BorderSize = 0;
-            this.butShipment.Location = new System.Drawing.Point(569, 203);
+            this.butShipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butShipment.ForeColor = System.Drawing.Color.Linen;
+            this.butShipment.Location = new System.Drawing.Point(546, 128);
             this.butShipment.Name = "butShipment";
-            this.butShipment.Size = new System.Drawing.Size(193, 40);
+            this.butShipment.Size = new System.Drawing.Size(182, 40);
             this.butShipment.TabIndex = 3;
             this.butShipment.Text = "Shipment";
             this.butShipment.UseVisualStyleBackColor = false;
@@ -99,9 +90,11 @@
             // 
             // butSuplier
             // 
-            this.butSuplier.BackColor = System.Drawing.Color.White;
+            this.butSuplier.BackColor = System.Drawing.Color.DodgerBlue;
             this.butSuplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butSuplier.FlatAppearance.BorderSize = 0;
+            this.butSuplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSuplier.ForeColor = System.Drawing.Color.Linen;
             this.butSuplier.Location = new System.Drawing.Point(248, 55);
             this.butSuplier.Name = "butSuplier";
             this.butSuplier.Size = new System.Drawing.Size(182, 40);
@@ -112,9 +105,11 @@
             // 
             // butWareHouse
             // 
-            this.butWareHouse.BackColor = System.Drawing.Color.White;
+            this.butWareHouse.BackColor = System.Drawing.Color.DodgerBlue;
             this.butWareHouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butWareHouse.FlatAppearance.BorderSize = 0;
+            this.butWareHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butWareHouse.ForeColor = System.Drawing.Color.Linen;
             this.butWareHouse.Location = new System.Drawing.Point(17, 55);
             this.butWareHouse.Name = "butWareHouse";
             this.butWareHouse.Size = new System.Drawing.Size(175, 40);
@@ -141,19 +136,10 @@
             this.labelConsumer.TabIndex = 7;
             this.labelConsumer.Text = "Consumer";
             // 
-            // labelInvoices
-            // 
-            this.labelInvoices.AutoSize = true;
-            this.labelInvoices.Location = new System.Drawing.Point(570, 23);
-            this.labelInvoices.Name = "labelInvoices";
-            this.labelInvoices.Size = new System.Drawing.Size(47, 13);
-            this.labelInvoices.TabIndex = 8;
-            this.labelInvoices.Text = "Invoices";
-            // 
             // labelShipment
             // 
             this.labelShipment.AutoSize = true;
-            this.labelShipment.Location = new System.Drawing.Point(566, 187);
+            this.labelShipment.Location = new System.Drawing.Point(543, 112);
             this.labelShipment.Name = "labelShipment";
             this.labelShipment.Size = new System.Drawing.Size(51, 13);
             this.labelShipment.TabIndex = 9;
@@ -179,9 +165,11 @@
             // 
             // butBack
             // 
-            this.butBack.BackColor = System.Drawing.Color.Transparent;
+            this.butBack.BackColor = System.Drawing.Color.DimGray;
             this.butBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.butBack.FlatAppearance.BorderSize = 0;
+            this.butBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butBack.ForeColor = System.Drawing.Color.Linen;
             this.butBack.Location = new System.Drawing.Point(17, 215);
             this.butBack.Name = "butBack";
             this.butBack.Size = new System.Drawing.Size(193, 40);
@@ -193,7 +181,7 @@
             // labelShipmentCom
             // 
             this.labelShipmentCom.AutoSize = true;
-            this.labelShipmentCom.Location = new System.Drawing.Point(570, 106);
+            this.labelShipmentCom.Location = new System.Drawing.Point(547, 31);
             this.labelShipmentCom.Name = "labelShipmentCom";
             this.labelShipmentCom.Size = new System.Drawing.Size(98, 13);
             this.labelShipmentCom.TabIndex = 14;
@@ -201,10 +189,12 @@
             // 
             // butShipmentCom
             // 
-            this.butShipmentCom.BackColor = System.Drawing.Color.White;
+            this.butShipmentCom.BackColor = System.Drawing.Color.DodgerBlue;
             this.butShipmentCom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butShipmentCom.FlatAppearance.BorderSize = 0;
-            this.butShipmentCom.Location = new System.Drawing.Point(569, 122);
+            this.butShipmentCom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butShipmentCom.ForeColor = System.Drawing.Color.Linen;
+            this.butShipmentCom.Location = new System.Drawing.Point(546, 47);
             this.butShipmentCom.Name = "butShipmentCom";
             this.butShipmentCom.Size = new System.Drawing.Size(182, 43);
             this.butShipmentCom.TabIndex = 13;
@@ -224,13 +214,11 @@
             this.Controls.Add(this.labelWareHouse);
             this.Controls.Add(this.labelSuplier);
             this.Controls.Add(this.labelShipment);
-            this.Controls.Add(this.labelInvoices);
             this.Controls.Add(this.labelConsumer);
             this.Controls.Add(this.labelGoods);
             this.Controls.Add(this.butWareHouse);
             this.Controls.Add(this.butSuplier);
             this.Controls.Add(this.butShipment);
-            this.Controls.Add(this.butInvoices);
             this.Controls.Add(this.butConsumer);
             this.Controls.Add(this.butGoods);
             this.Name = "DataBaseForm";
@@ -245,13 +233,11 @@
 
         private System.Windows.Forms.Button butGoods;
         private System.Windows.Forms.Button butConsumer;
-        private System.Windows.Forms.Button butInvoices;
         private System.Windows.Forms.Button butShipment;
         private System.Windows.Forms.Button butSuplier;
         private System.Windows.Forms.Button butWareHouse;
         private System.Windows.Forms.Label labelGoods;
         private System.Windows.Forms.Label labelConsumer;
-        private System.Windows.Forms.Label labelInvoices;
         private System.Windows.Forms.Label labelShipment;
         private System.Windows.Forms.Label labelSuplier;
         private System.Windows.Forms.Label labelWareHouse;

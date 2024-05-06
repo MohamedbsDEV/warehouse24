@@ -50,6 +50,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxShippmentName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
@@ -60,9 +62,9 @@
             this.butShipment.BackColor = System.Drawing.Color.Transparent;
             this.butShipment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butShipment.FlatAppearance.BorderSize = 0;
-            this.butShipment.Location = new System.Drawing.Point(719, 184);
+            this.butShipment.Location = new System.Drawing.Point(717, 129);
             this.butShipment.Name = "butShipment";
-            this.butShipment.Size = new System.Drawing.Size(110, 42);
+            this.butShipment.Size = new System.Drawing.Size(110, 36);
             this.butShipment.TabIndex = 5;
             this.butShipment.Text = "Edit Shipment";
             this.butShipment.UseVisualStyleBackColor = false;
@@ -73,7 +75,7 @@
             this.butDeletShipment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butDeletShipment.FlatAppearance.BorderSize = 0;
             this.butDeletShipment.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.butDeletShipment.Location = new System.Drawing.Point(719, 254);
+            this.butDeletShipment.Location = new System.Drawing.Point(717, 195);
             this.butDeletShipment.Name = "butDeletShipment";
             this.butDeletShipment.Size = new System.Drawing.Size(110, 36);
             this.butDeletShipment.TabIndex = 4;
@@ -85,7 +87,7 @@
             this.butAddShipment.BackColor = System.Drawing.Color.Transparent;
             this.butAddShipment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butAddShipment.FlatAppearance.BorderSize = 0;
-            this.butAddShipment.Location = new System.Drawing.Point(719, 111);
+            this.butAddShipment.Location = new System.Drawing.Point(717, 65);
             this.butAddShipment.Name = "butAddShipment";
             this.butAddShipment.Size = new System.Drawing.Size(110, 33);
             this.butAddShipment.TabIndex = 3;
@@ -109,7 +111,7 @@
             this.butBack.FlatAppearance.BorderSize = 0;
             this.butBack.Location = new System.Drawing.Point(16, 381);
             this.butBack.Name = "butBack";
-            this.butBack.Size = new System.Drawing.Size(75, 23);
+            this.butBack.Size = new System.Drawing.Size(84, 25);
             this.butBack.TabIndex = 7;
             this.butBack.Text = "Back";
             this.butBack.UseVisualStyleBackColor = false;
@@ -201,22 +203,22 @@
             // 
             // textBoxTariff
             // 
-            this.textBoxTariff.Location = new System.Drawing.Point(481, 339);
+            this.textBoxTariff.Location = new System.Drawing.Point(476, 337);
             this.textBoxTariff.Name = "textBoxTariff";
-            this.textBoxTariff.Size = new System.Drawing.Size(230, 20);
+            this.textBoxTariff.Size = new System.Drawing.Size(169, 20);
             this.textBoxTariff.TabIndex = 17;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(481, 384);
+            this.textBox2.Location = new System.Drawing.Point(476, 363);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 20);
+            this.textBox2.Size = new System.Drawing.Size(169, 20);
             this.textBox2.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(428, 391);
+            this.label1.Location = new System.Drawing.Point(423, 370);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 19;
@@ -225,17 +227,35 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(425, 342);
+            this.label2.Location = new System.Drawing.Point(420, 340);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 20;
             this.label2.Text = "Tariff";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(363, 314);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Shippment Name";
+            // 
+            // textBoxShippmentName
+            // 
+            this.textBoxShippmentName.Location = new System.Drawing.Point(476, 311);
+            this.textBoxShippmentName.Name = "textBoxShippmentName";
+            this.textBoxShippmentName.Size = new System.Drawing.Size(169, 20);
+            this.textBoxShippmentName.TabIndex = 21;
             // 
             // ShipmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 428);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxShippmentName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
@@ -282,5 +302,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxShippmentName;
     }
 }
