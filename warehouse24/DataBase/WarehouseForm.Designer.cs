@@ -39,14 +39,17 @@
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.warehouseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.warehouse24DataSet = new warehouse24.warehouse24DataSet();
-            this.warehouseTableAdapter = new warehouse24.warehouse24DataSetTableAdapters.WarehouseTableAdapter();
             this.textBoxNameWareHouse = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.butSearch = new System.Windows.Forms.Button();
+            this.warehouseTableAdapter = new warehouse24.warehouse24DataSetTableAdapters.WarehouseTableAdapter();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // butAddWareHouse
@@ -60,6 +63,7 @@
             this.butAddWareHouse.TabIndex = 0;
             this.butAddWareHouse.Text = "Add WareHouse";
             this.butAddWareHouse.UseVisualStyleBackColor = false;
+            this.butAddWareHouse.Click += new System.EventHandler(this.butAddWareHouse_Click);
             // 
             // butdeleteWareHouse
             // 
@@ -73,6 +77,7 @@
             this.butdeleteWareHouse.TabIndex = 1;
             this.butdeleteWareHouse.Text = "Delete WareHouse";
             this.butdeleteWareHouse.UseVisualStyleBackColor = false;
+            this.butdeleteWareHouse.Click += new System.EventHandler(this.butdeleteWareHouse_Click);
             // 
             // butEditWareHouse
             // 
@@ -143,10 +148,6 @@
             this.warehouse24DataSet.DataSetName = "warehouse24DataSet";
             this.warehouse24DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // warehouseTableAdapter
-            // 
-            this.warehouseTableAdapter.ClearBeforeFill = true;
-            // 
             // textBoxNameWareHouse
             // 
             this.textBoxNameWareHouse.Location = new System.Drawing.Point(122, 294);
@@ -180,13 +181,35 @@
             this.butSearch.TabIndex = 17;
             this.butSearch.Text = "Search";
             this.butSearch.UseVisualStyleBackColor = false;
+            this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
+            // 
+            // warehouseTableAdapter
+            // 
+            this.warehouseTableAdapter.ClearBeforeFill = true;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 454);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(475, 22);
+            this.statusStrip1.TabIndex = 19;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(36, 17);
+            this.toolStripStatusLabel1.Text = "Read!";
             // 
             // WarehouseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(475, 458);
+            this.ClientSize = new System.Drawing.Size(475, 476);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.butSearch);
             this.Controls.Add(this.label1);
@@ -203,6 +226,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,14 +241,16 @@
         private System.Windows.Forms.Label labelWAREHOUSE;
         private System.Windows.Forms.Button butBack;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBoxNameWareHouse;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button butSearch;
         private warehouse24DataSet warehouse24DataSet;
         private System.Windows.Forms.BindingSource warehouseBindingSource;
         private warehouse24DataSetTableAdapters.WarehouseTableAdapter warehouseTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBoxNameWareHouse;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Button butSearch;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

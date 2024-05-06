@@ -26,7 +26,10 @@ namespace warehouse24.DataBase
 
         private void butGoods_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DataBaseForm dataBase = new DataBaseForm();
+            dataBase.StartPosition = FormStartPosition.CenterScreen;
+            dataBase.Show();
+            this.Hide();
         }
 
         private void butImagePath_Click(object sender, EventArgs e)

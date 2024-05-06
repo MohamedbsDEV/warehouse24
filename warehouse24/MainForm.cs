@@ -62,6 +62,7 @@ namespace warehouse24
         private void butDataBase_Click(object sender, EventArgs e)
         {
             DataBaseForm dataBase = new DataBaseForm();
+            dataBase.StartPosition = FormStartPosition.CenterScreen;
             dataBase.Show();
             this.Hide();
         }

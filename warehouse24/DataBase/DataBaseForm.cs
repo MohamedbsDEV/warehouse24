@@ -62,8 +62,9 @@ namespace warehouse24
         {
             object instance = Activator.CreateInstance(window);
             Form form = (Form)instance;
+            form.StartPosition = FormStartPosition.CenterScreen;
             form.ShowDialog();
-            this.Close();
+            this.Hide();
         }
 
         private void butBack_Click(object sender, EventArgs e)

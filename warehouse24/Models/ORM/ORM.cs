@@ -10,6 +10,8 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Linq;
 using warehouse24.Models.Classes;
 using warehouse24.Models.Interfaces;
 
@@ -124,32 +126,7 @@ namespace warehouse24
             return list;
         
         }
-        //public List<Shippment> GetShipment() 
-        //{
-        //    List<Shippment> list = new List<Shippment>();
-        //    using (SqlConnection cnn = new SqlConnection( cnnString)) 
-        //    {
-        //        cnn.Open() ;
-        //        string request = "select id, name from dbo.Shipment";
-        //        SqlCommand cmd = new SqlCommand (request, cnn);
-        //        SqlDataReader reader = cmd.ExecuteReader();
-        //        if (reader.HasRows)
-        //        {
-        //            while (reader.Read()) 
-        //            {
-        //                int id = reader.GetInt32(0);
-        //                string name = reader.GetString(1);
-        //                Shippment shipment = new Shippment(id, name); 
-        //                list.Add(shipment);
-                    
-        //            }
-                
-        //        }
-            
-        //    }
-        //    return list;
         
-        //}
         public List<Invoice> GetInvoicesList() 
         {
             List<Invoice> list = new List<Invoice>();
@@ -204,6 +181,52 @@ namespace warehouse24
             }
             return list;
         
+        }
+
+        public void AddWareHouse(string WareHouseName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "INSERT INTO Warehouse (Name) VALUES (@Name)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", WareHouseName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void DeleteWareHouse(string WareHouseName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "DELETE FROM Warehouse WHERE Name = @Name";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", WareHouseName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }  
    

@@ -222,6 +222,7 @@
             this.Controls.Add(this.butConsumer);
             this.Controls.Add(this.butGoods);
             this.Name = "DataBaseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DataBase";
             this.Load += new System.EventHandler(this.DataBase_Load);
             this.ResumeLayout(false);

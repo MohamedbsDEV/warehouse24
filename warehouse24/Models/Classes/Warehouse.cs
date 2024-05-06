@@ -8,7 +8,7 @@ using warehouse24.Models.Interfaces;
 
 namespace warehouse24.Models.Classes
 {
-    public class Warehouse: IFrom, ITo
+    public class Warehouse
     {
         public int Id { get; set; }
         public string Name { get; set; }
