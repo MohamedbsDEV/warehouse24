@@ -107,11 +107,11 @@
             this.butBack.BackColor = System.Drawing.Color.Transparent;
             this.butBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBack.FlatAppearance.BorderSize = 0;
-            this.butBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butBack.Location = new System.Drawing.Point(16, 381);
             this.butBack.Name = "butBack";
             this.butBack.Size = new System.Drawing.Size(75, 23);
             this.butBack.TabIndex = 7;
+            this.butBack.Text = "Back";
             this.butBack.UseVisualStyleBackColor = false;
             this.butBack.Click += new System.EventHandler(this.butBack_Click);
             // 

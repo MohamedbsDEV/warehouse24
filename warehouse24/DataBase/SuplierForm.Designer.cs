@@ -70,11 +70,11 @@
             this.butBackSuplier.BackColor = System.Drawing.Color.Transparent;
             this.butBackSuplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBackSuplier.FlatAppearance.BorderSize = 0;
-            this.butBackSuplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butBackSuplier.Location = new System.Drawing.Point(12, 394);
             this.butBackSuplier.Name = "butBackSuplier";
             this.butBackSuplier.Size = new System.Drawing.Size(75, 23);
             this.butBackSuplier.TabIndex = 4;
+            this.butBackSuplier.Text = "Back";
             this.butBackSuplier.UseVisualStyleBackColor = false;
             this.butBackSuplier.Click += new System.EventHandler(this.butBackSuplier_Click);
             // 

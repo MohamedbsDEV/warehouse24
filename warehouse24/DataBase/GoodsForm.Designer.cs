@@ -109,11 +109,11 @@
             this.butGoods.BackColor = System.Drawing.Color.Transparent;
             this.butGoods.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butGoods.FlatAppearance.BorderSize = 0;
-            this.butGoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butGoods.Location = new System.Drawing.Point(13, 396);
             this.butGoods.Name = "butGoods";
             this.butGoods.Size = new System.Drawing.Size(75, 23);
             this.butGoods.TabIndex = 4;
+            this.butGoods.Text = "Back";
             this.butGoods.UseVisualStyleBackColor = false;
             this.butGoods.Click += new System.EventHandler(this.butGoods_Click);
             // 

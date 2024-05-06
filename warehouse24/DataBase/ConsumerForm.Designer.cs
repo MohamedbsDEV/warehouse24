@@ -107,14 +107,13 @@
             // butBackConsu
             // 
             this.butBackConsu.BackColor = System.Drawing.Color.Transparent;
-            
             this.butBackConsu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBackConsu.FlatAppearance.BorderSize = 0;
-            this.butBackConsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butBackConsu.Location = new System.Drawing.Point(16, 381);
             this.butBackConsu.Name = "butBackConsu";
             this.butBackConsu.Size = new System.Drawing.Size(105, 23);
             this.butBackConsu.TabIndex = 7;
+            this.butBackConsu.Text = "Back";
             this.butBackConsu.UseVisualStyleBackColor = false;
             this.butBackConsu.Click += new System.EventHandler(this.butBackConsu_Click);
             // 

@@ -109,11 +109,11 @@
             this.butBackInvoices.BackColor = System.Drawing.Color.Transparent;
             this.butBackInvoices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBackInvoices.FlatAppearance.BorderSize = 0;
-            this.butBackInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butBackInvoices.Location = new System.Drawing.Point(12, 343);
             this.butBackInvoices.Name = "butBackInvoices";
             this.butBackInvoices.Size = new System.Drawing.Size(75, 23);
             this.butBackInvoices.TabIndex = 4;
+            this.butBackInvoices.Text = "Back";
             this.butBackInvoices.UseVisualStyleBackColor = false;
             this.butBackInvoices.Click += new System.EventHandler(this.butBackInvoices_Click);
             // 

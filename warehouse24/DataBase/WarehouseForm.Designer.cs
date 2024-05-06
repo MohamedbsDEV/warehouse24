@@ -57,9 +57,9 @@
             this.butAddWareHouse.BackColor = System.Drawing.Color.Transparent;
             this.butAddWareHouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butAddWareHouse.FlatAppearance.BorderSize = 0;
-            this.butAddWareHouse.Location = new System.Drawing.Point(309, 302);
+            this.butAddWareHouse.Location = new System.Drawing.Point(374, 327);
             this.butAddWareHouse.Name = "butAddWareHouse";
-            this.butAddWareHouse.Size = new System.Drawing.Size(124, 53);
+            this.butAddWareHouse.Size = new System.Drawing.Size(124, 35);
             this.butAddWareHouse.TabIndex = 0;
             this.butAddWareHouse.Text = "Add WareHouse";
             this.butAddWareHouse.UseVisualStyleBackColor = false;
@@ -70,9 +70,9 @@
             this.butdeleteWareHouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butdeleteWareHouse.FlatAppearance.BorderSize = 0;
             this.butdeleteWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.butdeleteWareHouse.Location = new System.Drawing.Point(685, 302);
+            this.butdeleteWareHouse.Location = new System.Drawing.Point(655, 327);
             this.butdeleteWareHouse.Name = "butdeleteWareHouse";
-            this.butdeleteWareHouse.Size = new System.Drawing.Size(114, 60);
+            this.butdeleteWareHouse.Size = new System.Drawing.Size(123, 35);
             this.butdeleteWareHouse.TabIndex = 1;
             this.butdeleteWareHouse.Text = "Delete WareHouse";
             this.butdeleteWareHouse.UseVisualStyleBackColor = false;
@@ -81,9 +81,9 @@
             // 
             this.butEditWareHouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butEditWareHouse.FlatAppearance.BorderSize = 0;
-            this.butEditWareHouse.Location = new System.Drawing.Point(496, 302);
+            this.butEditWareHouse.Location = new System.Drawing.Point(513, 327);
             this.butEditWareHouse.Name = "butEditWareHouse";
-            this.butEditWareHouse.Size = new System.Drawing.Size(123, 58);
+            this.butEditWareHouse.Size = new System.Drawing.Size(123, 35);
             this.butEditWareHouse.TabIndex = 2;
             this.butEditWareHouse.Text = "Edit WareHouse";
             this.butEditWareHouse.UseVisualStyleBackColor = true;
@@ -102,11 +102,11 @@
             // 
             this.butBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBack.FlatAppearance.BorderSize = 0;
-            this.butBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butBack.Location = new System.Drawing.Point(12, 337);
             this.butBack.Name = "butBack";
             this.butBack.Size = new System.Drawing.Size(95, 25);
             this.butBack.TabIndex = 4;
+            this.butBack.Text = "Back";
             this.butBack.UseVisualStyleBackColor = true;
             this.butBack.Click += new System.EventHandler(this.butBack_Click);
             // 
