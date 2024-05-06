@@ -8,7 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace warehouse24.Properties {
+namespace warehouse24.Properties
+{
     using System.ComponentModel;
     using System.Resources;
 
@@ -27,41 +28,19 @@ namespace warehouse24.Properties {
     public class Warehouse24
     {
         public static global::System.Resources.ResourceManager resourceMan;
-        private static global::System.Globalization.CultureInfo resourceCulture;
+        
 
         public Warehouse24()
         {
             // Constructor code goes here
         }
     }
+}
 
     /// <summary>
     ///   Returns the cached ResourceManager instance used by this class.
     /// </summary>
-    internal static System.Resources.ResourceManager ResourceManager()
-    {
-        if (object.ReferenceEquals(ComponentResourceManager, null))
-        {
-            global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("warehouse24.Properties.Resources", typeof(Resources).Assembly);
-            ResourceManager = temp;
-        }
-        return ComponentResourceManager;
-    }
-}
-        
-        
-        /// <summary>
-        ///   Overrides the current thread's CurrentUICulture property for all
-        ///   resource lookups using this strongly typed resource class.
-        /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
-            get {
-                return resourceCulture;
-            }
-            set {
-                resourceCulture = value;
-            }
-        }
+    
+       
     
 

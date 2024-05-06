@@ -60,10 +60,9 @@
             this.butShipment.BackColor = System.Drawing.Color.Transparent;
             this.butShipment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butShipment.FlatAppearance.BorderSize = 0;
-            this.butShipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butShipment.Location = new System.Drawing.Point(719, 184);
             this.butShipment.Name = "butShipment";
-            this.butShipment.Size = new System.Drawing.Size(110, 53);
+            this.butShipment.Size = new System.Drawing.Size(110, 42);
             this.butShipment.TabIndex = 5;
             this.butShipment.Text = "Edit Shipment";
             this.butShipment.UseVisualStyleBackColor = false;
@@ -73,8 +72,8 @@
             this.butDeletShipment.BackColor = System.Drawing.Color.Transparent;
             this.butDeletShipment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butDeletShipment.FlatAppearance.BorderSize = 0;
-            this.butDeletShipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butDeletShipment.Location = new System.Drawing.Point(719, 272);
+            this.butDeletShipment.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.butDeletShipment.Location = new System.Drawing.Point(719, 254);
             this.butDeletShipment.Name = "butDeletShipment";
             this.butDeletShipment.Size = new System.Drawing.Size(110, 36);
             this.butDeletShipment.TabIndex = 4;
@@ -86,7 +85,6 @@
             this.butAddShipment.BackColor = System.Drawing.Color.Transparent;
             this.butAddShipment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butAddShipment.FlatAppearance.BorderSize = 0;
-            this.butAddShipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butAddShipment.Location = new System.Drawing.Point(719, 111);
             this.butAddShipment.Name = "butAddShipment";
             this.butAddShipment.Size = new System.Drawing.Size(110, 33);
@@ -107,7 +105,6 @@
             // butBack
             // 
             this.butBack.BackColor = System.Drawing.Color.Transparent;
-            
             this.butBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBack.FlatAppearance.BorderSize = 0;
             this.butBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -238,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 409);
+            this.ClientSize = new System.Drawing.Size(856, 428);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);

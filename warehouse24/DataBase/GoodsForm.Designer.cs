@@ -64,7 +64,6 @@
             this.butAddGoods.BackColor = System.Drawing.Color.Transparent;
             this.butAddGoods.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butAddGoods.FlatAppearance.BorderSize = 0;
-            this.butAddGoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butAddGoods.Location = new System.Drawing.Point(262, 359);
             this.butAddGoods.Name = "butAddGoods";
             this.butAddGoods.Size = new System.Drawing.Size(112, 40);
@@ -77,7 +76,6 @@
             this.butDeleteGoods.BackColor = System.Drawing.Color.Transparent;
             this.butDeleteGoods.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butDeleteGoods.FlatAppearance.BorderSize = 0;
-            this.butDeleteGoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butDeleteGoods.Location = new System.Drawing.Point(600, 359);
             this.butDeleteGoods.Name = "butDeleteGoods";
             this.butDeleteGoods.Size = new System.Drawing.Size(118, 40);
@@ -89,12 +87,11 @@
             // 
             this.butc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butc.FlatAppearance.BorderSize = 0;
-            this.butc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butc.Location = new System.Drawing.Point(426, 359);
             this.butc.Name = "butc";
             this.butc.Size = new System.Drawing.Size(120, 40);
             this.butc.TabIndex = 2;
-            this.butc.Text = "Add Goods";
+            this.butc.Text = "Edit Goods";
             this.butc.UseVisualStyleBackColor = true;
             // 
             // labelGOODS
@@ -110,7 +107,6 @@
             // butGoods
             // 
             this.butGoods.BackColor = System.Drawing.Color.Transparent;
-            
             this.butGoods.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butGoods.FlatAppearance.BorderSize = 0;
             this.butGoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -259,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 421);
+            this.ClientSize = new System.Drawing.Size(828, 444);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSearchGoods);

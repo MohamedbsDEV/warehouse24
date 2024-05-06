@@ -57,7 +57,6 @@
             this.butAddWareHouse.BackColor = System.Drawing.Color.Transparent;
             this.butAddWareHouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butAddWareHouse.FlatAppearance.BorderSize = 0;
-            this.butAddWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butAddWareHouse.Location = new System.Drawing.Point(309, 302);
             this.butAddWareHouse.Name = "butAddWareHouse";
             this.butAddWareHouse.Size = new System.Drawing.Size(124, 53);
@@ -70,19 +69,18 @@
             this.butdeleteWareHouse.BackColor = System.Drawing.Color.Transparent;
             this.butdeleteWareHouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butdeleteWareHouse.FlatAppearance.BorderSize = 0;
-            this.butdeleteWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butdeleteWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.butdeleteWareHouse.Location = new System.Drawing.Point(685, 302);
             this.butdeleteWareHouse.Name = "butdeleteWareHouse";
             this.butdeleteWareHouse.Size = new System.Drawing.Size(114, 60);
             this.butdeleteWareHouse.TabIndex = 1;
-            this.butdeleteWareHouse.Text = "delete WareHouse";
+            this.butdeleteWareHouse.Text = "Delete WareHouse";
             this.butdeleteWareHouse.UseVisualStyleBackColor = false;
             // 
             // butEditWareHouse
             // 
             this.butEditWareHouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butEditWareHouse.FlatAppearance.BorderSize = 0;
-            this.butEditWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butEditWareHouse.Location = new System.Drawing.Point(496, 302);
             this.butEditWareHouse.Name = "butEditWareHouse";
             this.butEditWareHouse.Size = new System.Drawing.Size(123, 58);

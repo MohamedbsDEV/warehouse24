@@ -195,7 +195,6 @@
             this.butEditSuplier.BackColor = System.Drawing.Color.Transparent;
             this.butEditSuplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butEditSuplier.FlatAppearance.BorderSize = 0;
-            this.butEditSuplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butEditSuplier.Location = new System.Drawing.Point(649, 352);
             this.butEditSuplier.Name = "butEditSuplier";
             this.butEditSuplier.Size = new System.Drawing.Size(87, 47);
@@ -208,7 +207,6 @@
             this.butDeleteSuplier.BackColor = System.Drawing.Color.Transparent;
             this.butDeleteSuplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butDeleteSuplier.FlatAppearance.BorderSize = 0;
-            this.butDeleteSuplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butDeleteSuplier.Location = new System.Drawing.Point(790, 352);
             this.butDeleteSuplier.Name = "butDeleteSuplier";
             this.butDeleteSuplier.Size = new System.Drawing.Size(98, 47);
@@ -221,7 +219,7 @@
             this.butAddSuplier.BackColor = System.Drawing.Color.Transparent;
             this.butAddSuplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butAddSuplier.FlatAppearance.BorderSize = 0;
-            this.butAddSuplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAddSuplier.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.butAddSuplier.Location = new System.Drawing.Point(515, 352);
             this.butAddSuplier.Name = "butAddSuplier";
             this.butAddSuplier.Size = new System.Drawing.Size(83, 47);

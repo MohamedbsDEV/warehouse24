@@ -75,7 +75,6 @@
             this.butInvoices.BackColor = System.Drawing.Color.White;
             this.butInvoices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butInvoices.FlatAppearance.BorderSize = 0;
-            this.butInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butInvoices.Location = new System.Drawing.Point(66, 149);
             this.butInvoices.Name = "butInvoices";
             this.butInvoices.Size = new System.Drawing.Size(133, 28);
@@ -102,12 +101,10 @@
             // butDataBase
             // 
             this.butDataBase.BackColor = System.Drawing.Color.White;
-            this.butDataBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butDataBase.FlatAppearance.BorderSize = 0;
-            this.butDataBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butDataBase.Location = new System.Drawing.Point(66, 258);
+            this.butDataBase.Location = new System.Drawing.Point(66, 257);
             this.butDataBase.Name = "butDataBase";
-            this.butDataBase.Size = new System.Drawing.Size(133, 36);
+            this.butDataBase.Size = new System.Drawing.Size(133, 28);
             this.butDataBase.TabIndex = 3;
             this.butDataBase.Text = "DataBase";
             this.butDataBase.UseVisualStyleBackColor = false;

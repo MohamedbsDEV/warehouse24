@@ -62,10 +62,9 @@
             this.butAddInvoices.BackColor = System.Drawing.Color.Transparent;
             this.butAddInvoices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butAddInvoices.FlatAppearance.BorderSize = 0;
-            this.butAddInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAddInvoices.Location = new System.Drawing.Point(393, 317);
+            this.butAddInvoices.Location = new System.Drawing.Point(483, 317);
             this.butAddInvoices.Name = "butAddInvoices";
-            this.butAddInvoices.Size = new System.Drawing.Size(129, 49);
+            this.butAddInvoices.Size = new System.Drawing.Size(129, 33);
             this.butAddInvoices.TabIndex = 0;
             this.butAddInvoices.Text = "Add Invoices";
             this.butAddInvoices.UseVisualStyleBackColor = false;
@@ -76,10 +75,9 @@
             this.butDeleteInvoices.BackColor = System.Drawing.Color.Transparent;
             this.butDeleteInvoices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butDeleteInvoices.FlatAppearance.BorderSize = 0;
-            this.butDeleteInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butDeleteInvoices.Location = new System.Drawing.Point(805, 313);
+            this.butDeleteInvoices.Location = new System.Drawing.Point(815, 317);
             this.butDeleteInvoices.Name = "butDeleteInvoices";
-            this.butDeleteInvoices.Size = new System.Drawing.Size(131, 53);
+            this.butDeleteInvoices.Size = new System.Drawing.Size(131, 33);
             this.butDeleteInvoices.TabIndex = 1;
             this.butDeleteInvoices.Text = "Delete Invoices";
             this.butDeleteInvoices.UseVisualStyleBackColor = false;
@@ -89,10 +87,9 @@
             this.butEditInvoices.BackColor = System.Drawing.Color.Transparent;
             this.butEditInvoices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butEditInvoices.FlatAppearance.BorderSize = 0;
-            this.butEditInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butEditInvoices.Location = new System.Drawing.Point(611, 313);
+            this.butEditInvoices.Location = new System.Drawing.Point(653, 317);
             this.butEditInvoices.Name = "butEditInvoices";
-            this.butEditInvoices.Size = new System.Drawing.Size(125, 53);
+            this.butEditInvoices.Size = new System.Drawing.Size(129, 33);
             this.butEditInvoices.TabIndex = 2;
             this.butEditInvoices.Text = "EditInvoices";
             this.butEditInvoices.UseVisualStyleBackColor = false;
@@ -110,7 +107,6 @@
             // butBackInvoices
             // 
             this.butBackInvoices.BackColor = System.Drawing.Color.Transparent;
-            
             this.butBackInvoices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBackInvoices.FlatAppearance.BorderSize = 0;
             this.butBackInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

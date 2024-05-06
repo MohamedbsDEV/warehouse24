@@ -52,10 +52,9 @@
             this.butAddShipmentCompany.BackColor = System.Drawing.Color.Transparent;
             this.butAddShipmentCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butAddShipmentCompany.FlatAppearance.BorderSize = 0;
-            this.butAddShipmentCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAddShipmentCompany.Location = new System.Drawing.Point(408, 259);
+            this.butAddShipmentCompany.Location = new System.Drawing.Point(302, 337);
             this.butAddShipmentCompany.Name = "butAddShipmentCompany";
-            this.butAddShipmentCompany.Size = new System.Drawing.Size(122, 45);
+            this.butAddShipmentCompany.Size = new System.Drawing.Size(144, 45);
             this.butAddShipmentCompany.TabIndex = 0;
             this.butAddShipmentCompany.Text = "Add Shipment Company";
             this.butAddShipmentCompany.UseVisualStyleBackColor = false;
@@ -65,10 +64,9 @@
             this.butEditShipmentCompany.BackColor = System.Drawing.Color.Transparent;
             this.butEditShipmentCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butEditShipmentCompany.FlatAppearance.BorderSize = 0;
-            this.butEditShipmentCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butEditShipmentCompany.Location = new System.Drawing.Point(536, 259);
+            this.butEditShipmentCompany.Location = new System.Drawing.Point(644, 337);
             this.butEditShipmentCompany.Name = "butEditShipmentCompany";
-            this.butEditShipmentCompany.Size = new System.Drawing.Size(122, 52);
+            this.butEditShipmentCompany.Size = new System.Drawing.Size(144, 45);
             this.butEditShipmentCompany.TabIndex = 1;
             this.butEditShipmentCompany.Text = "EditShipmentCompany";
             this.butEditShipmentCompany.UseVisualStyleBackColor = false;
@@ -78,10 +76,9 @@
             this.butDeleteShipmentCompany.BackColor = System.Drawing.Color.Transparent;
             this.butDeleteShipmentCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butDeleteShipmentCompany.FlatAppearance.BorderSize = 0;
-            this.butDeleteShipmentCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butDeleteShipmentCompany.Location = new System.Drawing.Point(664, 265);
+            this.butDeleteShipmentCompany.Location = new System.Drawing.Point(472, 336);
             this.butDeleteShipmentCompany.Name = "butDeleteShipmentCompany";
-            this.butDeleteShipmentCompany.Size = new System.Drawing.Size(122, 46);
+            this.butDeleteShipmentCompany.Size = new System.Drawing.Size(144, 46);
             this.butDeleteShipmentCompany.TabIndex = 2;
             this.butDeleteShipmentCompany.Text = "Delete Shipment Company";
             this.butDeleteShipmentCompany.UseVisualStyleBackColor = false;
@@ -89,7 +86,6 @@
             // butBack
             // 
             this.butBack.BackColor = System.Drawing.Color.Transparent;
-            
             this.butBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBack.FlatAppearance.BorderSize = 0;
             this.butBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
