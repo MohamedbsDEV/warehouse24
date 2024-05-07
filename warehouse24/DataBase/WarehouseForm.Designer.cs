@@ -218,7 +218,7 @@
             // 
             // numericUpDownId
             // 
-            this.numericUpDownId.Location = new System.Drawing.Point(131, 293);
+            this.numericUpDownId.Location = new System.Drawing.Point(131, 291);
             this.numericUpDownId.Name = "numericUpDownId";
             this.numericUpDownId.Size = new System.Drawing.Size(71, 20);
             this.numericUpDownId.TabIndex = 21;

@@ -26,7 +26,32 @@ namespace warehouse24.DataBase
 
         private void butBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DataBaseForm dataBase = new DataBaseForm();
+            dataBase.StartPosition = FormStartPosition.CenterScreen;
+            dataBase.Show();
+            this.Hide();
+        }
+
+        private void butAddShipment_Click(object sender, EventArgs e)
+        { 
+                if (textBoxShippmentName.Text != "")
+                {
+                    string newShippmenteName = textBoxShippmentName.Text;
+
+                    ORM orm = new ORM();
+                    orm.AddShippment(newShippmenteName);
+                    toolStripStatusLabel1.Text = newShippmenteName + "HaS BEEN ADD";
+                    ShipmentForm shippment = new ShipmentForm();
+                    shippment.StartPosition = FormStartPosition.CenterScreen;
+                    shippment.Show();
+                    this.Close();
+                }
+                else
+                {
+                    toolStripStatusLabel1.Text = "Please Add the Shipment Name";
+                }
+
+            }
         }
     }
-}
+

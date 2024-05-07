@@ -26,7 +26,20 @@ namespace warehouse24.DataBase
 
         private void butBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DataBaseForm dataBase = new DataBaseForm();
+            dataBase.StartPosition = FormStartPosition.CenterScreen;
+            dataBase.Show();
+            this.Hide();
+        }
+
+        private void butAddShipmentCompany_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butDeleteShipmentCompany_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

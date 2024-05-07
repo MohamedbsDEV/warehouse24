@@ -37,5 +37,10 @@ namespace warehouse24.DataBase
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
         }
+
+        private void butAddGoods_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

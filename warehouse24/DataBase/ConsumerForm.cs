@@ -31,7 +31,15 @@ namespace warehouse24.DataBase
 
         private void butBackConsu_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DataBaseForm dataBase = new DataBaseForm();
+            dataBase.StartPosition = FormStartPosition.CenterScreen;
+            dataBase.Show();
+            this.Hide();
+        }
+
+        private void butEditConsu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

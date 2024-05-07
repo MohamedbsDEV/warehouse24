@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.butShipment = new System.Windows.Forms.Button();
-            this.butDeletShipment = new System.Windows.Forms.Button();
-            this.butAddShipment = new System.Windows.Forms.Button();
+            this.butShippment = new System.Windows.Forms.Button();
+            this.butDeletShippment = new System.Windows.Forms.Button();
+            this.butAddShippment = new System.Windows.Forms.Button();
             this.labelSHIPMENT = new System.Windows.Forms.Label();
             this.butBack = new System.Windows.Forms.Button();
             this.dateTimePickerTimeShipment = new System.Windows.Forms.DateTimePicker();
@@ -52,47 +52,54 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxShippmentName = new System.Windows.Forms.TextBox();
+            this.labelId = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // butShipment
+            // butShippment
             // 
-            this.butShipment.BackColor = System.Drawing.Color.Transparent;
-            this.butShipment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butShipment.FlatAppearance.BorderSize = 0;
-            this.butShipment.Location = new System.Drawing.Point(717, 129);
-            this.butShipment.Name = "butShipment";
-            this.butShipment.Size = new System.Drawing.Size(110, 36);
-            this.butShipment.TabIndex = 5;
-            this.butShipment.Text = "Edit Shipment";
-            this.butShipment.UseVisualStyleBackColor = false;
+            this.butShippment.BackColor = System.Drawing.Color.Transparent;
+            this.butShippment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.butShippment.FlatAppearance.BorderSize = 0;
+            this.butShippment.Location = new System.Drawing.Point(717, 129);
+            this.butShippment.Name = "butShippment";
+            this.butShippment.Size = new System.Drawing.Size(110, 36);
+            this.butShippment.TabIndex = 5;
+            this.butShippment.Text = "Edit Shippment";
+            this.butShippment.UseVisualStyleBackColor = false;
             // 
-            // butDeletShipment
+            // butDeletShippment
             // 
-            this.butDeletShipment.BackColor = System.Drawing.Color.Transparent;
-            this.butDeletShipment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butDeletShipment.FlatAppearance.BorderSize = 0;
-            this.butDeletShipment.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.butDeletShipment.Location = new System.Drawing.Point(717, 195);
-            this.butDeletShipment.Name = "butDeletShipment";
-            this.butDeletShipment.Size = new System.Drawing.Size(110, 36);
-            this.butDeletShipment.TabIndex = 4;
-            this.butDeletShipment.Text = "Delete Shipment";
-            this.butDeletShipment.UseVisualStyleBackColor = false;
+            this.butDeletShippment.BackColor = System.Drawing.Color.Transparent;
+            this.butDeletShippment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.butDeletShippment.FlatAppearance.BorderSize = 0;
+            this.butDeletShippment.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.butDeletShippment.Location = new System.Drawing.Point(717, 195);
+            this.butDeletShippment.Name = "butDeletShippment";
+            this.butDeletShippment.Size = new System.Drawing.Size(110, 36);
+            this.butDeletShippment.TabIndex = 4;
+            this.butDeletShippment.Text = "Delete Shippment";
+            this.butDeletShippment.UseVisualStyleBackColor = false;
             // 
-            // butAddShipment
+            // butAddShippment
             // 
-            this.butAddShipment.BackColor = System.Drawing.Color.Transparent;
-            this.butAddShipment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butAddShipment.FlatAppearance.BorderSize = 0;
-            this.butAddShipment.Location = new System.Drawing.Point(717, 65);
-            this.butAddShipment.Name = "butAddShipment";
-            this.butAddShipment.Size = new System.Drawing.Size(110, 33);
-            this.butAddShipment.TabIndex = 3;
-            this.butAddShipment.Text = "Add Shipment";
-            this.butAddShipment.UseVisualStyleBackColor = false;
+            this.butAddShippment.BackColor = System.Drawing.Color.Transparent;
+            this.butAddShippment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.butAddShippment.FlatAppearance.BorderSize = 0;
+            this.butAddShippment.Location = new System.Drawing.Point(717, 65);
+            this.butAddShippment.Name = "butAddShippment";
+            this.butAddShippment.Size = new System.Drawing.Size(110, 33);
+            this.butAddShippment.TabIndex = 3;
+            this.butAddShippment.Text = "Add Shippment";
+            this.butAddShippment.UseVisualStyleBackColor = false;
+            this.butAddShippment.Click += new System.EventHandler(this.butAddShipment_Click);
             // 
             // labelSHIPMENT
             // 
@@ -109,7 +116,7 @@
             this.butBack.BackColor = System.Drawing.Color.Transparent;
             this.butBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBack.FlatAppearance.BorderSize = 0;
-            this.butBack.Location = new System.Drawing.Point(16, 381);
+            this.butBack.Location = new System.Drawing.Point(16, 370);
             this.butBack.Name = "butBack";
             this.butBack.Size = new System.Drawing.Size(84, 25);
             this.butBack.TabIndex = 7;
@@ -119,7 +126,7 @@
             // 
             // dateTimePickerTimeShipment
             // 
-            this.dateTimePickerTimeShipment.Location = new System.Drawing.Point(119, 313);
+            this.dateTimePickerTimeShipment.Location = new System.Drawing.Point(119, 308);
             this.dateTimePickerTimeShipment.Name = "dateTimePickerTimeShipment";
             this.dateTimePickerTimeShipment.Size = new System.Drawing.Size(210, 20);
             this.dateTimePickerTimeShipment.TabIndex = 12;
@@ -127,7 +134,7 @@
             // labelTimeShipment
             // 
             this.labelTimeShipment.AutoSize = true;
-            this.labelTimeShipment.Location = new System.Drawing.Point(13, 320);
+            this.labelTimeShipment.Location = new System.Drawing.Point(13, 311);
             this.labelTimeShipment.Name = "labelTimeShipment";
             this.labelTimeShipment.Size = new System.Drawing.Size(77, 13);
             this.labelTimeShipment.TabIndex = 13;
@@ -249,11 +256,46 @@
             this.textBoxShippmentName.Size = new System.Drawing.Size(169, 20);
             this.textBoxShippmentName.TabIndex = 21;
             // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Location = new System.Drawing.Point(67, 344);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(16, 13);
+            this.labelId.TabIndex = 23;
+            this.labelId.Text = "Id";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(119, 337);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown1.TabIndex = 24;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 406);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(856, 22);
+            this.statusStrip1.TabIndex = 25;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabel1.Text = "Read!!";
+            // 
             // ShipmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 428);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.labelId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxShippmentName);
             this.Controls.Add(this.label2);
@@ -265,15 +307,18 @@
             this.Controls.Add(this.dateTimePickerTimeShipment);
             this.Controls.Add(this.butBack);
             this.Controls.Add(this.labelSHIPMENT);
-            this.Controls.Add(this.butShipment);
-            this.Controls.Add(this.butDeletShipment);
-            this.Controls.Add(this.butAddShipment);
+            this.Controls.Add(this.butShippment);
+            this.Controls.Add(this.butDeletShippment);
+            this.Controls.Add(this.butAddShippment);
             this.Name = "ShipmentForm";
             this.Text = "Shipment";
             this.Load += new System.EventHandler(this.Shipment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,9 +326,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button butShipment;
-        private System.Windows.Forms.Button butDeletShipment;
-        private System.Windows.Forms.Button butAddShipment;
+        private System.Windows.Forms.Button butShippment;
+        private System.Windows.Forms.Button butDeletShippment;
+        private System.Windows.Forms.Button butAddShippment;
         private System.Windows.Forms.Label labelSHIPMENT;
         private System.Windows.Forms.Button butBack;
         private System.Windows.Forms.DateTimePicker dateTimePickerTimeShipment;
@@ -304,5 +349,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxShippmentName;
+        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

@@ -252,8 +252,359 @@ namespace warehouse24
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }  
-   
-}
+        public void AddConsumer(string consumerName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "INSERT INTO Consumer (Name) VALUES (@Name)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", consumerName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void DeleteConsumer(string consumerName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "DELETE FROM Consumer WHERE Name = @Name";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", consumerName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void EditConsumer(int idconsumer, string newName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "UPDATE Consumer SET Name = @NewName WHERE id = @Id";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", idconsumer);
+                        command.Parameters.AddWithValue("@NewName", newName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void AddGoods(string goodsName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "INSERT INTO Goods (Name) VALUES (@Name)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", goodsName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void DeleteGoods(string goodsName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "DELETE FROM Goods WHERE Name = @Name";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", goodsName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void EditGoods(int idgoods, string newName)
+
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "UPDATE Goods SET Name = @NewName WHERE id = @Id";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", idgoods);
+                        command.Parameters.AddWithValue("@NewName", newName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void AddShipmentCompany(string shipmentcompanyName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "INSERT INTO ShipmentCompany (Name) VALUES (@Name)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", shipmentcompanyName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void DeleteShipmentCompany(string shipmentcompanyName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "DELETE FROM Shipment Company WHERE Name = @Name";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", shipmentcompanyName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void EditShipmentCompany(int idshipmentcompany, string newName)
+
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "UPDATE Warehouse SET Name = @NewName WHERE id = @Id";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", idshipmentcompany);
+                        command.Parameters.AddWithValue("@NewName", newName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void AddShippment(string shipmentName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "INSERT INTO Shippment (Name) VALUES (@Name)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", shipmentName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void DeleteShipment(string shipmentName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "DELETE FROM Shipment WHERE Name = @Name";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", shipmentName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void EditShipment(int idshipment, string newName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "UPDATE Shipment SET Name = @NewName WHERE id = @Id";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", idshipment);
+                        command.Parameters.AddWithValue("@NewName", newName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void AddSupplier(string supplierName, string filePath)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "INSERT INTO Supplier (Name, Photo) VALUES (@Name, @Photo)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", supplierName);
+                        command.Parameters.AddWithValue("@Photo", GetImageBytes(filePath)); // Convert image to byte array
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private byte[] GetImageBytes(string filePath)
+        {
+            using (Image image = Image.FromFile(filePath))
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                image.Save(memoryStream, image.RawFormat);
+                return memoryStream.ToArray();
+            }
+        }
+        public void DeleteSupplier(string supplierName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "DELETE FROM Supplier WHERE Name = @Name";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", supplierName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void EditSupplier(int idsupplier, string newName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "UPDATE Supplier SET Name = @NewName WHERE id = @Id";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", idsupplier);
+                        command.Parameters.AddWithValue("@NewName", newName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+    }
+
+} 
+
+
     
 

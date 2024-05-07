@@ -49,7 +49,7 @@ namespace warehouse24
         private void butSuplier_Click(object sender, EventArgs e)
         {
             //call show windows method 
-            ShowForm(typeof(SuplierForm));
+            ShowForm(typeof(SupplierForm));
         }
 
         private void butShipmentCom_Click(object sender, EventArgs e)

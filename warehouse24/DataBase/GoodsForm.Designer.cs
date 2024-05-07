@@ -52,12 +52,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDownGoodCost = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownGoods = new System.Windows.Forms.NumericUpDown();
+            this.labelId = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelgoods = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGoods)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGoodCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGoods)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // butAddGoods
@@ -71,6 +77,7 @@
             this.butAddGoods.TabIndex = 0;
             this.butAddGoods.Text = "Add Goods";
             this.butAddGoods.UseVisualStyleBackColor = false;
+            this.butAddGoods.Click += new System.EventHandler(this.butAddGoods_Click);
             // 
             // butDeleteGoods
             // 
@@ -129,9 +136,9 @@
             // 
             // pictureBoxGoods
             // 
-            this.pictureBoxGoods.Location = new System.Drawing.Point(498, 45);
+            this.pictureBoxGoods.Location = new System.Drawing.Point(553, 45);
             this.pictureBoxGoods.Name = "pictureBoxGoods";
-            this.pictureBoxGoods.Size = new System.Drawing.Size(304, 156);
+            this.pictureBoxGoods.Size = new System.Drawing.Size(224, 156);
             this.pictureBoxGoods.TabIndex = 8;
             this.pictureBoxGoods.TabStop = false;
             // 
@@ -247,16 +254,51 @@
             // 
             // numericUpDownGoodCost
             // 
-            this.numericUpDownGoodCost.Location = new System.Drawing.Point(97, 310);
+            this.numericUpDownGoodCost.Location = new System.Drawing.Point(94, 312);
             this.numericUpDownGoodCost.Name = "numericUpDownGoodCost";
             this.numericUpDownGoodCost.Size = new System.Drawing.Size(57, 20);
             this.numericUpDownGoodCost.TabIndex = 19;
+            // 
+            // numericUpDownGoods
+            // 
+            this.numericUpDownGoods.Location = new System.Drawing.Point(94, 349);
+            this.numericUpDownGoods.Name = "numericUpDownGoods";
+            this.numericUpDownGoods.Size = new System.Drawing.Size(57, 20);
+            this.numericUpDownGoods.TabIndex = 21;
+            // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Location = new System.Drawing.Point(61, 351);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(16, 13);
+            this.labelId.TabIndex = 20;
+            this.labelId.Text = "Id";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelgoods});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 422);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(828, 22);
+            this.statusStrip1.TabIndex = 22;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabelgoods
+            // 
+            this.toolStripStatusLabelgoods.Name = "toolStripStatusLabelgoods";
+            this.toolStripStatusLabelgoods.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabelgoods.Text = "Read!!";
             // 
             // GoodsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 444);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.numericUpDownGoods);
+            this.Controls.Add(this.labelId);
             this.Controls.Add(this.numericUpDownGoodCost);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -282,6 +324,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGoodCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGoods)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +357,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDownGoodCost;
+        private System.Windows.Forms.NumericUpDown numericUpDownGoods;
+        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelgoods;
     }
 }

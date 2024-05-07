@@ -47,10 +47,13 @@
             this.consumerTableAdapter1 = new warehouse24.warehouse24DataSetTableAdapters.ConsumerTableAdapter();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.labelId = new System.Windows.Forms.Label();
+            this.numericUpDownconsumer = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConsumer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consumerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownconsumer)).BeginInit();
             this.SuspendLayout();
             // 
             // butAddConsu
@@ -75,6 +78,7 @@
             this.butEditConsu.TabIndex = 2;
             this.butEditConsu.Text = "Edit Consumer";
             this.butEditConsu.UseVisualStyleBackColor = false;
+            this.butEditConsu.Click += new System.EventHandler(this.butEditConsu_Click);
             // 
             // butDeleteConsu
             // 
@@ -152,15 +156,15 @@
             // labelConsumrName
             // 
             this.labelConsumrName.AutoSize = true;
-            this.labelConsumrName.Location = new System.Drawing.Point(36, 304);
+            this.labelConsumrName.Location = new System.Drawing.Point(48, 304);
             this.labelConsumrName.Name = "labelConsumrName";
-            this.labelConsumrName.Size = new System.Drawing.Size(35, 13);
+            this.labelConsumrName.Size = new System.Drawing.Size(82, 13);
             this.labelConsumrName.TabIndex = 9;
-            this.labelConsumrName.Text = "Name";
+            this.labelConsumrName.Text = "ConsumerName";
             // 
             // textBoxConsumerName
             // 
-            this.textBoxConsumerName.Location = new System.Drawing.Point(93, 297);
+            this.textBoxConsumerName.Location = new System.Drawing.Point(136, 301);
             this.textBoxConsumerName.Name = "textBoxConsumerName";
             this.textBoxConsumerName.Size = new System.Drawing.Size(332, 20);
             this.textBoxConsumerName.TabIndex = 10;
@@ -202,8 +206,24 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabel1.Text = "Read!!";
+            // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Location = new System.Drawing.Point(252, 396);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(16, 13);
+            this.labelId.TabIndex = 14;
+            this.labelId.Text = "Id";
+            // 
+            // numericUpDownconsumer
+            // 
+            this.numericUpDownconsumer.Location = new System.Drawing.Point(304, 394);
+            this.numericUpDownconsumer.Name = "numericUpDownconsumer";
+            this.numericUpDownconsumer.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownconsumer.TabIndex = 15;
             // 
             // ConsumerForm
             // 
@@ -211,6 +231,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(546, 479);
+            this.Controls.Add(this.numericUpDownconsumer);
+            this.Controls.Add(this.labelId);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridConsumer);
             this.Controls.Add(this.butSearchConsumer);
@@ -230,6 +252,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownconsumer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +278,7 @@
         private warehouse24DataSetTableAdapters.ConsumerTableAdapter consumerTableAdapter1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.NumericUpDown numericUpDownconsumer;
     }
 }
