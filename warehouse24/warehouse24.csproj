@@ -71,11 +71,11 @@
     <Compile Include="DataBase\GoodsForm.Designer.cs">
       <DependentUpon>GoodsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataBase\ShipmentForm.cs">
+    <Compile Include="DataBase\ShippmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DataBase\ShipmentForm.Designer.cs">
-      <DependentUpon>ShipmentForm.cs</DependentUpon>
+    <Compile Include="DataBase\ShippmentForm.Designer.cs">
+      <DependentUpon>ShippmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase\ShipmentCompany.cs">
       <SubType>Form</SubType>
@@ -153,8 +153,8 @@
     <EmbeddedResource Include="DataBase\GoodsForm.resx">
       <DependentUpon>GoodsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataBase\ShipmentForm.resx">
-      <DependentUpon>ShipmentForm.cs</DependentUpon>
+    <EmbeddedResource Include="DataBase\ShippmentForm.resx">
+      <DependentUpon>ShippmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataBase\ShipmentCompany.resx">
       <DependentUpon>ShipmentCompany.cs</DependentUpon>

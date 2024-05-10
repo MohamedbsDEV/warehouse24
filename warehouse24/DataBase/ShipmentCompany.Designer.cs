@@ -43,13 +43,13 @@
             this.textBoxNameShipmentCompany = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelId = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownId = new System.Windows.Forms.NumericUpDown();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentcoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,7 @@
             this.butEditShipmentCompany.TabIndex = 1;
             this.butEditShipmentCompany.Text = "EditShipmentCompany";
             this.butEditShipmentCompany.UseVisualStyleBackColor = false;
+            this.butEditShipmentCompany.Click += new System.EventHandler(this.butEditShipmentCompany_Click);
             // 
             // butDeleteShipmentCompany
             // 
@@ -179,28 +180,28 @@
             this.labelId.TabIndex = 9;
             this.labelId.Text = "Id";
             // 
-            // numericUpDown1
+            // numericUpDownId
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(525, 332);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(36, 20);
-            this.numericUpDown1.TabIndex = 10;
+            this.numericUpDownId.Location = new System.Drawing.Point(525, 332);
+            this.numericUpDownId.Name = "numericUpDownId";
+            this.numericUpDownId.Size = new System.Drawing.Size(36, 20);
+            this.numericUpDownId.TabIndex = 10;
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 501);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(663, 22);
             this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel
+            // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(36, 17);
-            this.toolStripStatusLabel.Text = "read!!";
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(36, 17);
+            this.toolStripStatusLabel1.Text = "read!!";
             // 
             // ShipmentCompany
             // 
@@ -208,7 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 523);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownId);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxNameShipmentCompany);
@@ -224,7 +225,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentcoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -248,8 +249,8 @@
         private System.Windows.Forms.TextBox textBoxNameShipmentCompany;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelId;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownId;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

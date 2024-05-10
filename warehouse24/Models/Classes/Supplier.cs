@@ -9,7 +9,7 @@ using warehouse24.Models.Interfaces;
 
 namespace warehouse24.Models.Classes
 {
-    public class Supplier: IFrom
+    public class Supplier
     {
         int Id { get; set; }
         string Name { get; set; }

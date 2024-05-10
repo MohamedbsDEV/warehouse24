@@ -48,31 +48,32 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.labelId = new System.Windows.Forms.Label();
-            this.numericUpDownconsumer = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownId = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConsumer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consumerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownconsumer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).BeginInit();
             this.SuspendLayout();
             // 
             // butAddConsu
             // 
             this.butAddConsu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butAddConsu.FlatAppearance.BorderSize = 0;
-            this.butAddConsu.Location = new System.Drawing.Point(155, 333);
+            this.butAddConsu.Location = new System.Drawing.Point(32, 333);
             this.butAddConsu.Name = "butAddConsu";
             this.butAddConsu.Size = new System.Drawing.Size(110, 42);
             this.butAddConsu.TabIndex = 0;
             this.butAddConsu.Text = "Add Consumer";
             this.butAddConsu.UseVisualStyleBackColor = true;
+            this.butAddConsu.Click += new System.EventHandler(this.butAddConsu_Click);
             // 
             // butEditConsu
             // 
             this.butEditConsu.BackColor = System.Drawing.Color.Transparent;
             this.butEditConsu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butEditConsu.FlatAppearance.BorderSize = 0;
-            this.butEditConsu.Location = new System.Drawing.Point(17, 333);
+            this.butEditConsu.Location = new System.Drawing.Point(176, 333);
             this.butEditConsu.Name = "butEditConsu";
             this.butEditConsu.Size = new System.Drawing.Size(102, 42);
             this.butEditConsu.TabIndex = 2;
@@ -91,6 +92,7 @@
             this.butDeleteConsu.TabIndex = 3;
             this.butDeleteConsu.Text = "Delete Consumer";
             this.butDeleteConsu.UseVisualStyleBackColor = false;
+            this.butDeleteConsu.Click += new System.EventHandler(this.butDeleteConsu_Click);
             // 
             // labelCONSUMER
             // 
@@ -218,12 +220,12 @@
             this.labelId.TabIndex = 14;
             this.labelId.Text = "Id";
             // 
-            // numericUpDownconsumer
+            // numericUpDownId
             // 
-            this.numericUpDownconsumer.Location = new System.Drawing.Point(304, 394);
-            this.numericUpDownconsumer.Name = "numericUpDownconsumer";
-            this.numericUpDownconsumer.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownconsumer.TabIndex = 15;
+            this.numericUpDownId.Location = new System.Drawing.Point(304, 394);
+            this.numericUpDownId.Name = "numericUpDownId";
+            this.numericUpDownId.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownId.TabIndex = 15;
             // 
             // ConsumerForm
             // 
@@ -231,7 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(546, 479);
-            this.Controls.Add(this.numericUpDownconsumer);
+            this.Controls.Add(this.numericUpDownId);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridConsumer);
@@ -252,7 +254,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownconsumer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,6 +281,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label labelId;
-        private System.Windows.Forms.NumericUpDown numericUpDownconsumer;
+        private System.Windows.Forms.NumericUpDown numericUpDownId;
     }
 }

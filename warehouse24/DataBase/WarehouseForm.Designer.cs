@@ -39,7 +39,7 @@
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.warehouseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.warehouse24DataSet = new warehouse24.warehouse24DataSet();
-            this.textBoxNameWareHouse = new System.Windows.Forms.TextBox();
+            this.textBoxWareHouseName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.butSearch = new System.Windows.Forms.Button();
@@ -152,12 +152,12 @@
             this.warehouse24DataSet.DataSetName = "warehouse24DataSet";
             this.warehouse24DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBoxNameWareHouse
+            // textBoxWareHouseName
             // 
-            this.textBoxNameWareHouse.Location = new System.Drawing.Point(131, 316);
-            this.textBoxNameWareHouse.Name = "textBoxNameWareHouse";
-            this.textBoxNameWareHouse.Size = new System.Drawing.Size(216, 20);
-            this.textBoxNameWareHouse.TabIndex = 8;
+            this.textBoxWareHouseName.Location = new System.Drawing.Point(131, 316);
+            this.textBoxWareHouseName.Name = "textBoxWareHouseName";
+            this.textBoxWareHouseName.Size = new System.Drawing.Size(216, 20);
+            this.textBoxWareHouseName.TabIndex = 8;
             // 
             // label1
             // 
@@ -235,7 +235,7 @@
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.butSearch);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxNameWareHouse);
+            this.Controls.Add(this.textBoxWareHouseName);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.butBack);
             this.Controls.Add(this.labelWAREHOUSE);
@@ -264,7 +264,7 @@
         private System.Windows.Forms.Label labelWAREHOUSE;
         private System.Windows.Forms.Button butBack;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBoxNameWareHouse;
+        private System.Windows.Forms.TextBox textBoxWareHouseName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button butSearch;

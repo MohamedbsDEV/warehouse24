@@ -45,14 +45,18 @@ namespace warehouse24.DataBase
 
         private void butAddSupplier_Click(object sender, EventArgs e)
         {
-            if (textBoxNameSupplier.Text != "" && textBoxImagePath.Text != "") 
+            if (textBoxSupplierName.Text != "" && textBoxImagePath.Text != "") 
             {
-                string supplierName = textBoxNameSupplier.Text;
-                string filePath = textBoxImagePath.Text;
+                string newsupplierName = textBoxSupplierName.Text;
+                string newfilePath = textBoxImagePath.Text;
                 ORM orm = new ORM();
-                orm.AddSupplier(supplierName,filePath);
-                toolStripStatusLabel1.Text = supplierName +" Has Been Added!!";
-
+                orm.AddSupplier(newsupplierName, newfilePath);
+                toolStripStatusLabel1.Text = newsupplierName +" Has Been Added!!";
+                SupplierForm supplier = new SupplierForm();
+                supplier.StartPosition = FormStartPosition.CenterScreen;
+                supplier.Show();
+                this.supplierTableAdapter.Fill(this.warehouse24DataSet.Supplier);
+                this.Close();
             }
             
 
@@ -121,5 +125,49 @@ namespace warehouse24.DataBase
                 }
             }
         }
+
+        private void butDeleteSupplier_Click(object sender, EventArgs e)
+        {
+            if (textBoxSupplierName.Text != "")
+            {
+                string newSuppliereName = textBoxSupplierName.Text;
+
+                ORM orm = new ORM();
+                orm.DeleteSupplier(newSuppliereName);
+                toolStripStatusLabel1.Text = newSuppliereName + "HaS BEEN Deleted";
+                SupplierForm supplier = new SupplierForm();
+                supplier.StartPosition = FormStartPosition.CenterScreen;
+                supplier.Show();
+                this.supplierTableAdapter.Fill(this.warehouse24DataSet.Supplier);
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the Supplier Name That you want to Delete ";
+            }
+
+        }
+
+        private void butEditSupplier_Click(object sender, EventArgs e)
+        {
+            if (textBoxSupplierName.Text != "" && (int)numericUpDownId.Value != 0)
+            {
+                string newsuppliereName = textBoxSupplierName.Text;
+                int idsupplier = (int)numericUpDownId.Value;
+                ORM orm = new ORM();
+                orm.EditSupplier(idsupplier, newsuppliereName);
+                toolStripStatusLabel1.Text = newsuppliereName + "HaS BEEN Edit";
+                SupplierForm supplier = new SupplierForm();
+                supplier.StartPosition = FormStartPosition.CenterScreen;
+                supplier.Show();
+                this.supplierTableAdapter.Fill(this.warehouse24DataSet.Supplier);
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the Supplier Name and ID";
+            }
+        }
     }
+    
 }

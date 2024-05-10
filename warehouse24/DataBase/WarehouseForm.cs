@@ -61,9 +61,9 @@ namespace warehouse24.DataBase
 
         private void butAddWareHouse_Click(object sender, EventArgs e)
         {
-            if (textBoxNameWareHouse.Text != "")
+            if (textBoxWareHouseName.Text != "")
             {
-                string newWareHouseName = textBoxNameWareHouse.Text;
+                string newWareHouseName = textBoxWareHouseName.Text;
 
                 ORM orm = new ORM();
                 orm.AddWareHouse(newWareHouseName);
@@ -82,9 +82,9 @@ namespace warehouse24.DataBase
 
         private void butdeleteWareHouse_Click(object sender, EventArgs e)
         {
-            if (textBoxNameWareHouse.Text != "")
+            if (textBoxWareHouseName.Text != "")
             {
-                string newWareHouseName = textBoxNameWareHouse.Text;
+                string newWareHouseName = textBoxWareHouseName.Text;
 
                 ORM orm = new ORM();
                 orm.DeleteWareHouse(newWareHouseName);
@@ -103,9 +103,9 @@ namespace warehouse24.DataBase
 
         private void butEditWareHouse_Click(object sender, EventArgs e)
         {
-            if (textBoxNameWareHouse.Text != "" && (int)numericUpDownId.Value != 0)
+            if (textBoxWareHouseName.Text != "" && (int)numericUpDownId.Value != 0)
             {
-                string newWareHouseName = textBoxNameWareHouse.Text;
+                string newWareHouseName = textBoxWareHouseName.Text;
                 int idWareHouse = (int)numericUpDownId.Value;
                 ORM orm = new ORM();
                 orm.EditWarehouse(idWareHouse, newWareHouseName);

@@ -455,7 +455,7 @@ namespace warehouse24
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void AddShippment(string shipmentName)
+        public void AddShippment(string shippmentName)
         {
             try
             {
@@ -466,7 +466,7 @@ namespace warehouse24
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Name", shipmentName);
+                        command.Parameters.AddWithValue("@Name", shippmentName);
 
                         command.ExecuteNonQuery();
                     }
@@ -477,18 +477,18 @@ namespace warehouse24
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void DeleteShipment(string shipmentName)
+        public void DeleteShippment(string shippmentName)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(cnnString))
                 {
                     connection.Open();
-                    string query = "DELETE FROM Shipment WHERE Name = @Name";
+                    string query = "DELETE FROM Shippment WHERE Name = @Name";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Name", shipmentName);
+                        command.Parameters.AddWithValue("@Name", shippmentName);
 
                         command.ExecuteNonQuery();
                     }
@@ -499,18 +499,18 @@ namespace warehouse24
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void EditShipment(int idshipment, string newName)
+        public void EditShippment(int idshippment, string newName)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(cnnString))
                 {
                     connection.Open();
-                    string query = "UPDATE Shipment SET Name = @NewName WHERE id = @Id";
+                    string query = "UPDATE Shippment SET Name = @NewName WHERE id = @Id";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Id", idshipment);
+                        command.Parameters.AddWithValue("@Id", idshippment);
                         command.Parameters.AddWithValue("@NewName", newName);
 
                         command.ExecuteNonQuery();

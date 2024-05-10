@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using warehouse24.Models.Classes;
 
 namespace warehouse24.DataBase
 {
@@ -40,7 +41,65 @@ namespace warehouse24.DataBase
 
         private void butAddGoods_Click(object sender, EventArgs e)
         {
+            if (textBoxGoodsName.Text != "")
+            {
+                string newgoodsName = textBoxGoodsName.Text;
 
+                ORM orm = new ORM();
+                orm.AddGoods(newgoodsName);
+                toolStripStatusLabel1.Text = newgoodsName + "HaS BEEN ADD";
+                GoodsForm goods = new GoodsForm();
+                goods.StartPosition = FormStartPosition.CenterScreen;
+                goods.Show();
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the Goods Name";
+            }
+        }
+
+        private void butDeleteGoods_Click(object sender, EventArgs e)
+        {
+            if (textBoxGoodsName.Text != "")
+            {
+                string newgoodsName = textBoxGoodsName.Text;
+
+                ORM orm = new ORM();
+                orm.DeleteGoods(newgoodsName);
+                toolStripStatusLabel1.Text = newgoodsName + "HaS BEEN Deleted";
+                GoodsForm goods = new GoodsForm();
+                goods.StartPosition = FormStartPosition.CenterScreen;
+                goods.Show();
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the WareHouse Name That you want to Delete ";
+            }
+        }
+
+        private void butEditGoods_Click(object sender, EventArgs e)
+        {
+            if (textBoxGoodsName.Text != "" && (int)numericUpDownId.Value != 0)
+            {
+                string newgoodsName = textBoxGoodsName.Text;
+                int idgoods = (int)numericUpDownId.Value;
+                ORM orm = new ORM();
+                orm.EditGoods(idgoods, newgoodsName);
+                toolStripStatusLabel1.Text = newgoodsName + "HaS BEEN Edit";
+                GoodsForm goods = new GoodsForm();
+                goods.StartPosition = FormStartPosition.CenterScreen;
+                goods.Show();
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the Goods Name and ID";
+            }
         }
     }
+
+       
+    
 }

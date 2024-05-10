@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.labelSUPLIER = new System.Windows.Forms.Label();
+            this.labelSUPPLIER = new System.Windows.Forms.Label();
             this.butBackSuplier = new System.Windows.Forms.Button();
             this.labelSupplierPhotos = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -41,35 +41,37 @@
             this.butSearch = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.textBoxImagePath = new System.Windows.Forms.TextBox();
-            this.textBoxNameSupplier = new System.Windows.Forms.TextBox();
-            this.labelSupplier = new System.Windows.Forms.Label();
+            this.textBoxSupplierName = new System.Windows.Forms.TextBox();
+            this.labelSupplierName = new System.Windows.Forms.Label();
             this.pictureBoxSuplierImage = new System.Windows.Forms.PictureBox();
             this.butEditSupplier = new System.Windows.Forms.Button();
             this.butDeleteSupplier = new System.Windows.Forms.Button();
             this.butAddSupplier = new System.Windows.Forms.Button();
             this.labelId = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownId = new System.Windows.Forms.NumericUpDown();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.supplierTableAdapter = new warehouse24.warehouse24DataSetTableAdapters.SupplierTableAdapter();
+            this.warehouse24DataSet1 = new warehouse24.warehouse24DataSet();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSuplierImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelSUPLIER
+            // labelSUPPLIER
             // 
-            this.labelSUPLIER.AutoSize = true;
-            this.labelSUPLIER.BackColor = System.Drawing.Color.Transparent;
-            this.labelSUPLIER.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSUPLIER.Location = new System.Drawing.Point(12, 9);
-            this.labelSUPLIER.Name = "labelSUPLIER";
-            this.labelSUPLIER.Size = new System.Drawing.Size(86, 20);
-            this.labelSUPLIER.TabIndex = 3;
-            this.labelSUPLIER.Text = "SUPLIER";
+            this.labelSUPPLIER.AutoSize = true;
+            this.labelSUPPLIER.BackColor = System.Drawing.Color.Transparent;
+            this.labelSUPPLIER.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSUPPLIER.Location = new System.Drawing.Point(12, 9);
+            this.labelSUPPLIER.Name = "labelSUPPLIER";
+            this.labelSUPPLIER.Size = new System.Drawing.Size(89, 18);
+            this.labelSUPPLIER.TabIndex = 3;
+            this.labelSUPPLIER.Text = "SUPPLIER";
             // 
             // butBackSuplier
             // 
@@ -88,10 +90,10 @@
             // 
             this.labelSupplierPhotos.AutoSize = true;
             this.labelSupplierPhotos.BackColor = System.Drawing.Color.Transparent;
-            this.labelSupplierPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSupplierPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSupplierPhotos.Location = new System.Drawing.Point(725, 60);
             this.labelSupplierPhotos.Name = "labelSupplierPhotos";
-            this.labelSupplierPhotos.Size = new System.Drawing.Size(136, 20);
+            this.labelSupplierPhotos.Size = new System.Drawing.Size(102, 16);
             this.labelSupplierPhotos.TabIndex = 8;
             this.labelSupplierPhotos.Text = "Supplier Photos";
             this.labelSupplierPhotos.Click += new System.EventHandler(this.labelSuplierPhotos_Click);
@@ -168,23 +170,23 @@
             this.textBoxImagePath.Size = new System.Drawing.Size(239, 20);
             this.textBoxImagePath.TabIndex = 13;
             // 
-            // textBoxNameSupplier
+            // textBoxSupplierName
             // 
-            this.textBoxNameSupplier.Location = new System.Drawing.Point(649, 306);
-            this.textBoxNameSupplier.Name = "textBoxNameSupplier";
-            this.textBoxNameSupplier.Size = new System.Drawing.Size(246, 20);
-            this.textBoxNameSupplier.TabIndex = 14;
+            this.textBoxSupplierName.Location = new System.Drawing.Point(649, 306);
+            this.textBoxSupplierName.Name = "textBoxSupplierName";
+            this.textBoxSupplierName.Size = new System.Drawing.Size(246, 20);
+            this.textBoxSupplierName.TabIndex = 14;
             // 
-            // labelSupplier
+            // labelSupplierName
             // 
-            this.labelSupplier.AutoSize = true;
-            this.labelSupplier.BackColor = System.Drawing.Color.Transparent;
-            this.labelSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSupplier.Location = new System.Drawing.Point(539, 306);
-            this.labelSupplier.Name = "labelSupplier";
-            this.labelSupplier.Size = new System.Drawing.Size(105, 18);
-            this.labelSupplier.TabIndex = 15;
-            this.labelSupplier.Text = "Supplier Name";
+            this.labelSupplierName.AutoSize = true;
+            this.labelSupplierName.BackColor = System.Drawing.Color.Transparent;
+            this.labelSupplierName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSupplierName.Location = new System.Drawing.Point(539, 306);
+            this.labelSupplierName.Name = "labelSupplierName";
+            this.labelSupplierName.Size = new System.Drawing.Size(90, 15);
+            this.labelSupplierName.TabIndex = 15;
+            this.labelSupplierName.Text = "Supplier Name";
             // 
             // pictureBoxSuplierImage
             // 
@@ -205,6 +207,7 @@
             this.butEditSupplier.TabIndex = 2;
             this.butEditSupplier.Text = "Edit Supplier";
             this.butEditSupplier.UseVisualStyleBackColor = false;
+            this.butEditSupplier.Click += new System.EventHandler(this.butEditSupplier_Click);
             // 
             // butDeleteSupplier
             // 
@@ -217,6 +220,7 @@
             this.butDeleteSupplier.TabIndex = 1;
             this.butDeleteSupplier.Text = "Delete Supplier";
             this.butDeleteSupplier.UseVisualStyleBackColor = false;
+            this.butDeleteSupplier.Click += new System.EventHandler(this.butDeleteSupplier_Click);
             // 
             // butAddSupplier
             // 
@@ -241,12 +245,12 @@
             this.labelId.TabIndex = 16;
             this.labelId.Text = "Id";
             // 
-            // numericUpDown1
+            // numericUpDownId
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(62, 350);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(50, 20);
-            this.numericUpDown1.TabIndex = 17;
+            this.numericUpDownId.Location = new System.Drawing.Point(62, 350);
+            this.numericUpDownId.Name = "numericUpDownId";
+            this.numericUpDownId.Size = new System.Drawing.Size(50, 20);
+            this.numericUpDownId.TabIndex = 17;
             // 
             // statusStrip1
             // 
@@ -268,16 +272,21 @@
             // 
             this.supplierTableAdapter.ClearBeforeFill = true;
             // 
+            // warehouse24DataSet1
+            // 
+            this.warehouse24DataSet1.DataSetName = "warehouse24DataSet";
+            this.warehouse24DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // SupplierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 468);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownId);
             this.Controls.Add(this.labelId);
-            this.Controls.Add(this.labelSupplier);
-            this.Controls.Add(this.textBoxNameSupplier);
+            this.Controls.Add(this.labelSupplierName);
+            this.Controls.Add(this.textBoxSupplierName);
             this.Controls.Add(this.textBoxImagePath);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.butSearch);
@@ -286,7 +295,7 @@
             this.Controls.Add(this.labelSupplierPhotos);
             this.Controls.Add(this.pictureBoxSuplierImage);
             this.Controls.Add(this.butBackSuplier);
-            this.Controls.Add(this.labelSUPLIER);
+            this.Controls.Add(this.labelSUPPLIER);
             this.Controls.Add(this.butEditSupplier);
             this.Controls.Add(this.butDeleteSupplier);
             this.Controls.Add(this.butAddSupplier);
@@ -297,9 +306,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSuplierImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,7 +320,7 @@
         private System.Windows.Forms.Button butAddSupplier;
         private System.Windows.Forms.Button butDeleteSupplier;
         private System.Windows.Forms.Button butEditSupplier;
-        private System.Windows.Forms.Label labelSUPLIER;
+        private System.Windows.Forms.Label labelSUPPLIER;
         private System.Windows.Forms.Button butBackSuplier;
         private System.Windows.Forms.PictureBox pictureBoxSuplierImage;
         private System.Windows.Forms.Label labelSupplierPhotos;
@@ -319,10 +329,10 @@
         private System.Windows.Forms.Button butSearch;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.TextBox textBoxImagePath;
-        private System.Windows.Forms.TextBox textBoxNameSupplier;
-        private System.Windows.Forms.Label labelSupplier;
+        private System.Windows.Forms.TextBox textBoxSupplierName;
+        private System.Windows.Forms.Label labelSupplierName;
         private System.Windows.Forms.Label labelId;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownId;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private warehouse24DataSet warehouse24DataSet;
@@ -330,5 +340,6 @@
         private warehouse24DataSetTableAdapters.SupplierTableAdapter supplierTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private warehouse24DataSet warehouse24DataSet1;
     }
 }

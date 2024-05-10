@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.butAddGoods = new System.Windows.Forms.Button();
             this.butDeleteGoods = new System.Windows.Forms.Button();
-            this.butc = new System.Windows.Forms.Button();
+            this.butEditGoods = new System.Windows.Forms.Button();
             this.labelGOODS = new System.Windows.Forms.Label();
-            this.butGoods = new System.Windows.Forms.Button();
+            this.butBackGoods = new System.Windows.Forms.Button();
             this.labelGoodImage = new System.Windows.Forms.Label();
             this.pictureBoxGoods = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,17 +52,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDownGoodCost = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownGoods = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownId = new System.Windows.Forms.NumericUpDown();
             this.labelId = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelgoods = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGoods)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGoodCost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGoods)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,19 +88,20 @@
             this.butDeleteGoods.Name = "butDeleteGoods";
             this.butDeleteGoods.Size = new System.Drawing.Size(118, 40);
             this.butDeleteGoods.TabIndex = 1;
-            this.butDeleteGoods.Text = "DeleteGoods";
+            this.butDeleteGoods.Text = "Delete Goods";
             this.butDeleteGoods.UseVisualStyleBackColor = false;
+            this.butDeleteGoods.Click += new System.EventHandler(this.butDeleteGoods_Click);
             // 
-            // butc
+            // butEditGoods
             // 
-            this.butc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butc.FlatAppearance.BorderSize = 0;
-            this.butc.Location = new System.Drawing.Point(426, 359);
-            this.butc.Name = "butc";
-            this.butc.Size = new System.Drawing.Size(120, 40);
-            this.butc.TabIndex = 2;
-            this.butc.Text = "Edit Goods";
-            this.butc.UseVisualStyleBackColor = true;
+            this.butEditGoods.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.butEditGoods.FlatAppearance.BorderSize = 0;
+            this.butEditGoods.Location = new System.Drawing.Point(426, 359);
+            this.butEditGoods.Name = "butEditGoods";
+            this.butEditGoods.Size = new System.Drawing.Size(120, 40);
+            this.butEditGoods.TabIndex = 2;
+            this.butEditGoods.Text = "Edit Goods";
+            this.butEditGoods.UseVisualStyleBackColor = true;
             // 
             // labelGOODS
             // 
@@ -112,18 +113,18 @@
             this.labelGOODS.TabIndex = 3;
             this.labelGOODS.Text = "GOODS";
             // 
-            // butGoods
+            // butBackGoods
             // 
-            this.butGoods.BackColor = System.Drawing.Color.Transparent;
-            this.butGoods.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butGoods.FlatAppearance.BorderSize = 0;
-            this.butGoods.Location = new System.Drawing.Point(13, 396);
-            this.butGoods.Name = "butGoods";
-            this.butGoods.Size = new System.Drawing.Size(75, 23);
-            this.butGoods.TabIndex = 4;
-            this.butGoods.Text = "Back";
-            this.butGoods.UseVisualStyleBackColor = false;
-            this.butGoods.Click += new System.EventHandler(this.butGoods_Click);
+            this.butBackGoods.BackColor = System.Drawing.Color.Transparent;
+            this.butBackGoods.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.butBackGoods.FlatAppearance.BorderSize = 0;
+            this.butBackGoods.Location = new System.Drawing.Point(13, 396);
+            this.butBackGoods.Name = "butBackGoods";
+            this.butBackGoods.Size = new System.Drawing.Size(75, 23);
+            this.butBackGoods.TabIndex = 4;
+            this.butBackGoods.Text = "Back";
+            this.butBackGoods.UseVisualStyleBackColor = false;
+            this.butBackGoods.Click += new System.EventHandler(this.butGoods_Click);
             // 
             // labelGoodImage
             // 
@@ -259,12 +260,12 @@
             this.numericUpDownGoodCost.Size = new System.Drawing.Size(57, 20);
             this.numericUpDownGoodCost.TabIndex = 19;
             // 
-            // numericUpDownGoods
+            // numericUpDownId
             // 
-            this.numericUpDownGoods.Location = new System.Drawing.Point(94, 349);
-            this.numericUpDownGoods.Name = "numericUpDownGoods";
-            this.numericUpDownGoods.Size = new System.Drawing.Size(57, 20);
-            this.numericUpDownGoods.TabIndex = 21;
+            this.numericUpDownId.Location = new System.Drawing.Point(94, 349);
+            this.numericUpDownId.Name = "numericUpDownId";
+            this.numericUpDownId.Size = new System.Drawing.Size(57, 20);
+            this.numericUpDownId.TabIndex = 21;
             // 
             // labelId
             // 
@@ -278,18 +279,18 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelgoods});
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 422);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(828, 22);
             this.statusStrip1.TabIndex = 22;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabelgoods
+            // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabelgoods.Name = "toolStripStatusLabelgoods";
-            this.toolStripStatusLabelgoods.Size = new System.Drawing.Size(39, 17);
-            this.toolStripStatusLabelgoods.Text = "Read!!";
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabel1.Text = "Read!!";
             // 
             // GoodsForm
             // 
@@ -297,7 +298,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 444);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.numericUpDownGoods);
+            this.Controls.Add(this.numericUpDownId);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.numericUpDownGoodCost);
             this.Controls.Add(this.label2);
@@ -310,9 +311,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBoxGoods);
             this.Controls.Add(this.labelGoodImage);
-            this.Controls.Add(this.butGoods);
+            this.Controls.Add(this.butBackGoods);
             this.Controls.Add(this.labelGOODS);
-            this.Controls.Add(this.butc);
+            this.Controls.Add(this.butEditGoods);
             this.Controls.Add(this.butDeleteGoods);
             this.Controls.Add(this.butAddGoods);
             this.Name = "GoodsForm";
@@ -324,7 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGoodCost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGoods)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -336,9 +337,9 @@
 
         private System.Windows.Forms.Button butAddGoods;
         private System.Windows.Forms.Button butDeleteGoods;
-        private System.Windows.Forms.Button butc;
+        private System.Windows.Forms.Button butEditGoods;
         private System.Windows.Forms.Label labelGOODS;
-        private System.Windows.Forms.Button butGoods;
+        private System.Windows.Forms.Button butBackGoods;
         private System.Windows.Forms.Label labelGoodImage;
         private System.Windows.Forms.PictureBox pictureBoxGoods;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -357,9 +358,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDownGoodCost;
-        private System.Windows.Forms.NumericUpDown numericUpDownGoods;
+        private System.Windows.Forms.NumericUpDown numericUpDownId;
         private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelgoods;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

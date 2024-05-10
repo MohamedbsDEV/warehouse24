@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using warehouse24.Models.Classes;
 
 namespace warehouse24.DataBase
 {
@@ -37,9 +38,65 @@ namespace warehouse24.DataBase
             this.Hide();
         }
 
+        private void butAddConsu_Click(object sender, EventArgs e)
+        {
+            if (textBoxConsumerName.Text != "")
+            {
+                string newconsumerName = textBoxConsumerName.Text;
+
+                ORM orm = new ORM();
+                orm.AddConsumer(newconsumerName);
+                toolStripStatusLabel1.Text = newconsumerName + "HaS BEEN ADD";
+                ConsumerForm consumer = new ConsumerForm();
+                consumer.StartPosition = FormStartPosition.CenterScreen;
+                consumer.Show();
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the Consumer Name";
+            }
+        }
+
+        private void butDeleteConsu_Click(object sender, EventArgs e)
+        {
+            if (textBoxConsumerName.Text != "")
+            {
+                string newconsumerName = textBoxConsumerName.Text;
+
+                ORM orm = new ORM();
+                orm.DeleteConsumer(newconsumerName);
+                toolStripStatusLabel1.Text = newconsumerName + "HaS BEEN Deleted";
+                ConsumerForm consumer = new ConsumerForm();
+                consumer.StartPosition = FormStartPosition.CenterScreen;
+                consumer.Show();
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the Consumer Name That you want to Delete ";
+            }
+
+        }
+
         private void butEditConsu_Click(object sender, EventArgs e)
         {
-
+            if (textBoxConsumerName.Text != "" && (int)numericUpDownId.Value != 0)
+            {
+                string newconsumerName = textBoxConsumerName.Text;
+                int idconsumer = (int)numericUpDownId.Value;
+                ORM orm = new ORM();
+                orm.EditConsumer(idconsumer, newconsumerName);
+                toolStripStatusLabel1.Text = newconsumerName + "HaS BEEN Edit";
+                ConsumerForm consumer = new ConsumerForm();
+                consumer.StartPosition = FormStartPosition.CenterScreen;
+                consumer.Show();
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the Consumer Name and ID";
+            }
         }
     }
 }

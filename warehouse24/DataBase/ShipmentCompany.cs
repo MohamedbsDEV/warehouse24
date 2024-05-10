@@ -34,12 +34,62 @@ namespace warehouse24.DataBase
 
         private void butAddShipmentCompany_Click(object sender, EventArgs e)
         {
+            if (textBoxNameShipmentCompany.Text != "")
+            {
+                string newshipmentcompanyName = textBoxNameShipmentCompany.Text;
 
+                ORM orm = new ORM();
+                orm.AddWareHouse(newshipmentcompanyName);
+                toolStripStatusLabel1.Text = newshipmentcompanyName + "HaS BEEN ADD";
+                ShipmentCompany shipmentcompany = new ShipmentCompany();
+                shipmentcompany.StartPosition = FormStartPosition.CenterScreen;
+                shipmentcompany.Show();
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the WareHouse Name";
+            }
         }
 
         private void butDeleteShipmentCompany_Click(object sender, EventArgs e)
         {
+            if (butDeleteShipmentCompany.Text != "")
+            {
+                string newshipmentcompanyName = butDeleteShipmentCompany.Text;
 
+                ORM orm = new ORM();
+                orm.DeleteWareHouse(newshipmentcompanyName);
+                toolStripStatusLabel1.Text = newshipmentcompanyName + "HaS BEEN Deleted";
+                ShipmentCompany shipmentcompany = new ShipmentCompany();
+                shipmentcompany.StartPosition = FormStartPosition.CenterScreen;
+                shipmentcompany.Show();
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the ShipmentCompany Name That you want to Delete ";
+            }
+        }
+
+        private void butEditShipmentCompany_Click(object sender, EventArgs e)
+        {
+            if (textBoxNameShipmentCompany.Text != "" && (int)numericUpDownId.Value != 0)
+            {
+                string newshipmentcompanyName = textBoxNameShipmentCompany.Text;
+                int idshipmentcompany = (int)numericUpDownId.Value;
+                ORM orm = new ORM();
+                orm.EditShipmentCompany(idshipmentcompany, newshipmentcompanyName);
+                toolStripStatusLabel1.Text = newshipmentcompanyName + "HaS BEEN Edit";
+                ShipmentCompany warehouse = new ShipmentCompany();
+                warehouse.StartPosition = FormStartPosition.CenterScreen;
+                warehouse.Show();
+                this.Close();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = "Please Add the ShipmentCompany Name and ID";
+            }
         }
     }
 }

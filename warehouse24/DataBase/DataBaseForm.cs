@@ -38,7 +38,7 @@ namespace warehouse24
         
         private void butShipment_Click(object sender, EventArgs e)
         {
-            ShowForm(typeof(ShipmentForm));
+            ShowForm(typeof(ShippmentForm));
         }
 
         private void butWareHouse_Click(object sender, EventArgs e)
