@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using warehouse24.Models.Classes;
+using warehouse24.Models.ORM;
 
 namespace warehouse24.DataBase
 {
@@ -16,6 +17,7 @@ namespace warehouse24.DataBase
         public WarehouseForm()
         {
             InitializeComponent();
+           
         }
 
         private void Warehouse_Load(object sender, EventArgs e)
@@ -71,6 +73,7 @@ namespace warehouse24.DataBase
                 WarehouseForm warehouse = new WarehouseForm();
                 warehouse.StartPosition = FormStartPosition.CenterScreen;
                 warehouse.Show();
+                this.warehouseTableAdapter.Fill(this.warehouse24DataSet.Warehouse);
                 this.Close();
             }
             else 
@@ -92,6 +95,7 @@ namespace warehouse24.DataBase
                 WarehouseForm warehouse = new WarehouseForm();
                 warehouse.StartPosition = FormStartPosition.CenterScreen;
                 warehouse.Show();
+                this.warehouseTableAdapter.Fill(this.warehouse24DataSet.Warehouse);
                 this.Close();
             }
             else
@@ -103,7 +107,7 @@ namespace warehouse24.DataBase
 
         private void butEditWareHouse_Click(object sender, EventArgs e)
         {
-            if (textBoxWareHouseName.Text != "" && (int)numericUpDownId.Value != 0)
+            if (textBoxWareHouseName.Text != "" && numericUpDownId.Value != 0)
             {
                 string newWareHouseName = textBoxWareHouseName.Text;
                 int idWareHouse = (int)numericUpDownId.Value;
@@ -112,14 +116,16 @@ namespace warehouse24.DataBase
                 toolStripStatusLabel1.Text = newWareHouseName + "HaS BEEN Edit";
                 WarehouseForm warehouse = new WarehouseForm();
                 warehouse.StartPosition = FormStartPosition.CenterScreen;
+                this.warehouseTableAdapter.Fill(this.warehouse24DataSet.Warehouse);
                 warehouse.Show();
                 this.Close();
             }
             else
             {
-                toolStripStatusLabel1.Text = "Please Add the WareHouse Name and ID";
+                toolStripStatusLabel1.Text = "Please Add the Warehouse Name and ID";
             }
         }
+        
     }
     
 }

@@ -1,21 +1,16 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using warehouse24.Models.Classes;
-using warehouse24.Models.Interfaces;
 
-namespace warehouse24
+using warehouse24.Models.Classes;
+using static System.Windows.Forms.LinkLabel;
+
+namespace warehouse24.Models.ORM
 {
     public class ORM
     {
@@ -53,7 +48,7 @@ namespace warehouse24
         public List<Warehouse> GetWarehouse()
         {
             List<Warehouse> list = new List<Warehouse>();
-            using (SqlConnection cnn = new SqlConnection( cnnString))
+            using (SqlConnection cnn = new SqlConnection(cnnString))
             {
                 cnn.Open();
                 string request = "selecte id , name ,  from dbo.Warehouse";
@@ -103,31 +98,31 @@ namespace warehouse24
 
         {
             List<Supplier> list = new List<Supplier>();
-            using ( SqlConnection cnn = new SqlConnection( cnnString)) 
+            using (SqlConnection cnn = new SqlConnection(cnnString))
             {
                 cnn.Open();
                 string request = "select id, name from dbo.Supplier";
                 SqlCommand cmd = new SqlCommand(request, cnn);
                 SqlDataReader reader = cmd.ExecuteReader();
-                if(reader.HasRows) 
+                if (reader.HasRows)
                 {
-                    while (reader.Read()) 
+                    while (reader.Read())
                     {
                         int id = reader.GetInt32(0);
                         string name = reader.GetString(1);
                         Supplier supplier = new Supplier(id, name);
                         list.Add(supplier);
-                    
+
                     }
-                
+
                 }
-            
+
             }
             return list;
-        
+
         }
-        
-        public List<Invoice> GetInvoicesList() 
+
+        public List<Invoice> GetInvoicesList()
         {
             List<Invoice> list = new List<Invoice>();
             FromWarehouse fromWarehouse = null;
@@ -136,9 +131,9 @@ namespace warehouse24
             Shippment shippment = null;
             FromSupplier fromSupplier = null;
 
-            using (SqlConnection cnn = new SqlConnection( cnnString)) 
+            using (SqlConnection cnn = new SqlConnection(cnnString))
             {
-                cnn.Open() ;
+                cnn.Open();
                 string request = "SELECT I.id,I.date,I.type_invo, W1.name AS from_warehouse_name," +
                                 "W2.name AS to_warehouse_name," +
                                 "S1.name As from_Supplier," +
@@ -153,12 +148,12 @@ namespace warehouse24
                                 "INNER JOIN dbo.Shipment SH1 ON I.id_ship = SH1.id" +
                                 "INNER JOIN dbo.[Shipment-co]  ShipCo ON SH1.id_com = ShipCo.id  ";
 
-                SqlCommand cmd = new SqlCommand(request, cnn);  
+                SqlCommand cmd = new SqlCommand(request, cnn);
                 SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows) 
+                if (reader.HasRows)
                 {
                     while (reader.Read())
-                    
+
                     {
                         int id = reader.GetInt32(0);
                         DateTime date = reader.GetDateTime(1);
@@ -169,18 +164,16 @@ namespace warehouse24
                         toConsumer.Name = reader.GetString(6);
                         shippment.Name = reader.GetString(7);
 
-                        
+
                         int id_ship = reader.GetInt32(5);
-                        Invoice invoices = new Invoice(id,date,fromWarehouse,toWarehouse,toConsumer,fromSupplier,type_invo,shippment);
-                        list.Add(invoices);
 
                     }
-                
+
                 }
-            
+
             }
             return list;
-        
+
         }
 
         public void AddWareHouse(string WareHouseName)
@@ -319,19 +312,19 @@ namespace warehouse24
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void AddGoods(string goodsName)
+        public void AddGoods(string goodsName, decimal goodsCost)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(cnnString))
                 {
                     connection.Open();
-                    string query = "INSERT INTO Goods (Name) VALUES (@Name)";
+                    string query = "INSERT INTO Goods (Name, Cost) VALUES (@Name, @Cost)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Name", goodsName);
-
+                        command.Parameters.AddWithValue("@Cost", goodsCost);
                         command.ExecuteNonQuery();
                     }
                 }
@@ -363,20 +356,20 @@ namespace warehouse24
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void EditGoods(int idgoods, string newName)
-
+        public void EditGoods(int idgoods, string newName, float newCost)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(cnnString))
                 {
                     connection.Open();
-                    string query = "UPDATE Goods SET Name = @NewName WHERE id = @Id";
+                    string query = "UPDATE Goods SET Name = @NewName, Cost = @NewCost WHERE id = @Id";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Id", idgoods);
                         command.Parameters.AddWithValue("@NewName", newName);
+                        command.Parameters.AddWithValue("@NewCost", newCost);
 
                         command.ExecuteNonQuery();
                     }
@@ -455,18 +448,26 @@ namespace warehouse24
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void AddShippment(string shippmentName)
+        public void AddShippment(string shippmentName, float tarrif, float cost, DateTime time)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(cnnString))
                 {
                     connection.Open();
-                    string query = "INSERT INTO Shippment (Name) VALUES (@Name)";
+                    string query = "INSERT INTO Shippment (Name, Id_com, Tariff, Time, Cost) VALUES (@Name, @Id_com)" +
+                        "(@Tariff, @Time, @Cost)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Name", shippmentName);
+                        command.Parameters.AddWithValue("@Id_com", shippmentName);
+                        command.Parameters.AddWithValue("@Tariff", shippmentName);
+                        command.Parameters.AddWithValue("@Time", shippmentName);
+                        command.Parameters.AddWithValue("@Cost", shippmentName);
+
+
+
 
                         command.ExecuteNonQuery();
                     }
@@ -499,19 +500,31 @@ namespace warehouse24
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void EditShippment(int idshippment, string newName)
+        public void EditShippment(int idshippment, string newName, float newtariff, float newcost, DateTime newtime, int newIdCom)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(cnnString))
                 {
                     connection.Open();
-                    string query = "UPDATE Shippment SET Name = @NewName WHERE id = @Id";
+                    string query = @"
+                            UPDATE Shippment
+                            SET Name = @NewName,
+                                tariff = @NewTariff,
+                                time = @NewTime,
+                                cost = @NewCost,
+                                id_com = @NewId_com
+                            WHERE id = @Id
+                            ";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Id", idshippment);
                         command.Parameters.AddWithValue("@NewName", newName);
+                        command.Parameters.AddWithValue("@NewId_com", newIdCom);
+                        command.Parameters.AddWithValue("@NewTariff", newtariff);
+                        command.Parameters.AddWithValue("@NewCost", newcost);
+                        command.Parameters.AddWithValue("@NewTime", newtime);
 
                         command.ExecuteNonQuery();
                     }
@@ -601,10 +614,115 @@ namespace warehouse24
             }
         }
 
+        public List<ShippmentCompany> SelectCompanyNames()
+        {
+            List<ShippmentCompany> companies = new List<ShippmentCompany>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "SELECT Id, Name FROM Shipment_co";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                ShippmentCompany company = new ShippmentCompany
+                                {
+                                    Id = reader.GetInt32(0),
+                                    Name = reader.GetString(1)
+                                };
+                                companies.Add(company);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return companies;
+        }
+        public List<Goods> SelectGoodsNames()
+        {
+            List<Goods> goods = new List<Goods>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "SELECT Id, Name,Cost FROM Goods";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Goods good = new Goods
+                                {
+                                    Id = reader.GetInt32(0),
+                                    Name = reader.GetString(1),
+                                    Cost = reader.GetDouble(2)
+                                };
+                                goods.Add(good);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return goods;
+        }
+        public List<FromWarehouse> SelectWarehouseNames()
+        {
+            List<FromWarehouse> warehouses = new List<FromWarehouse>();
+
+            try
+            {
+
+                using (SqlConnection connection = new SqlConnection(cnnString))
+                {
+                    connection.Open();
+                    string query = "SELECT Id, Name FROM WareHouse";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                FromWarehouse warehouse = new FromWarehouse
+                                {
+                                    Id = reader.GetInt32(0),
+                                    Name = reader.GetString(1)
+                                };
+                                warehouses.Add(warehouse);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return warehouses;
+        }
+
+
     }
-
-} 
-
-
-    
+}
 

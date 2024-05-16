@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace warehouse24
 {
     public class Bill
+
     {
+
     }
 }

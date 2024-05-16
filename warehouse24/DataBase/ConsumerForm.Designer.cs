@@ -60,7 +60,7 @@
             // 
             this.butAddConsu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butAddConsu.FlatAppearance.BorderSize = 0;
-            this.butAddConsu.Location = new System.Drawing.Point(32, 333);
+            this.butAddConsu.Location = new System.Drawing.Point(13, 369);
             this.butAddConsu.Name = "butAddConsu";
             this.butAddConsu.Size = new System.Drawing.Size(110, 42);
             this.butAddConsu.TabIndex = 0;
@@ -73,7 +73,7 @@
             this.butEditConsu.BackColor = System.Drawing.Color.Transparent;
             this.butEditConsu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butEditConsu.FlatAppearance.BorderSize = 0;
-            this.butEditConsu.Location = new System.Drawing.Point(176, 333);
+            this.butEditConsu.Location = new System.Drawing.Point(157, 369);
             this.butEditConsu.Name = "butEditConsu";
             this.butEditConsu.Size = new System.Drawing.Size(102, 42);
             this.butEditConsu.TabIndex = 2;
@@ -86,7 +86,7 @@
             this.butDeleteConsu.BackColor = System.Drawing.Color.Transparent;
             this.butDeleteConsu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butDeleteConsu.FlatAppearance.BorderSize = 0;
-            this.butDeleteConsu.Location = new System.Drawing.Point(304, 333);
+            this.butDeleteConsu.Location = new System.Drawing.Point(285, 369);
             this.butDeleteConsu.Name = "butDeleteConsu";
             this.butDeleteConsu.Size = new System.Drawing.Size(121, 42);
             this.butDeleteConsu.TabIndex = 3;
@@ -158,7 +158,7 @@
             // labelConsumrName
             // 
             this.labelConsumrName.AutoSize = true;
-            this.labelConsumrName.Location = new System.Drawing.Point(48, 304);
+            this.labelConsumrName.Location = new System.Drawing.Point(48, 346);
             this.labelConsumrName.Name = "labelConsumrName";
             this.labelConsumrName.Size = new System.Drawing.Size(82, 13);
             this.labelConsumrName.TabIndex = 9;
@@ -166,7 +166,7 @@
             // 
             // textBoxConsumerName
             // 
-            this.textBoxConsumerName.Location = new System.Drawing.Point(136, 301);
+            this.textBoxConsumerName.Location = new System.Drawing.Point(136, 343);
             this.textBoxConsumerName.Name = "textBoxConsumerName";
             this.textBoxConsumerName.Size = new System.Drawing.Size(332, 20);
             this.textBoxConsumerName.TabIndex = 10;
@@ -214,7 +214,7 @@
             // labelId
             // 
             this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(252, 396);
+            this.labelId.Location = new System.Drawing.Point(84, 319);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(16, 13);
             this.labelId.TabIndex = 14;
@@ -222,7 +222,7 @@
             // 
             // numericUpDownId
             // 
-            this.numericUpDownId.Location = new System.Drawing.Point(304, 394);
+            this.numericUpDownId.Location = new System.Drawing.Point(136, 317);
             this.numericUpDownId.Name = "numericUpDownId";
             this.numericUpDownId.Size = new System.Drawing.Size(53, 20);
             this.numericUpDownId.TabIndex = 15;

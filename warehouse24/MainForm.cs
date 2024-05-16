@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using warehouse24.DataBase;
 using warehouse24.Invoices;
+using warehouse24.Models.ORM;
 using warehouse24.ReportsWindows;
 
 namespace warehouse24
@@ -69,7 +70,7 @@ namespace warehouse24
 
         private void butInvoices_Click(object sender, EventArgs e)
         {
-            InvoiceWindow invoiceWindow = new InvoiceWindow();
+            InvoiceForm invoiceWindow = new InvoiceForm();
             invoiceWindow.Show();
             this.Hide();
         }
@@ -77,7 +78,7 @@ namespace warehouse24
         private void butReport_Click(object sender, EventArgs e)
         {
             
-            ReportsWindow reportsWindows = new ReportsWindow();
+            ReportsForm reportsWindows = new ReportsForm();
             reportsWindows.Show();
             this.Hide();
         }

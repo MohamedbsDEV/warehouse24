@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace warehouse24
 {
-    public partial class Reports
+   public class reports
     {
     }
 }

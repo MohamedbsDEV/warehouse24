@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace warehouse24.Models.Classes
 {
-    public class ToConsumer
+    public class ShippmentCompany
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public ToConsumer (int id, string name)
+        public string Name { get; set; }    
+
+        public ShippmentCompany() { }
+        public ShippmentCompany(int id , string name) 
         {
             this.Id = id;
             this.Name = name;
-
         }
 
-        public ToConsumer() { }
         public override string ToString()
         {
-            return $"{Id}  {Name} \n";
+            return $"{Id}  {Name}";
         }
-
     }
 }

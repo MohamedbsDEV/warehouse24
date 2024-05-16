@@ -12,29 +12,27 @@ namespace warehouse24.Models.Classes
     {
         public int Id { get; set; }
         public DateTime DateTime { get; set; }
-        public FromWarehouse FromWarehouse { get; set; }
-        public ToWarehouse ToWarehouse { get; set; } 
+        public FromWarehouse FromWarehouses { get; set; }
         public ToConsumer ToConsumer { get; set; } 
-        public FromSupplier FromSupplier { get; set; }
         public string TypeInvoices { get; set; }
         public Shippment Shipment { get; set; }
+        public Goods Goods { get; set; }
+        public Invoice() { }
 
-        public Invoice(int id, DateTime date, FromWarehouse  fromWarehouse, ToWarehouse toWarehouse,ToConsumer toConsumer,FromSupplier fromSupplier, string typeInvoices, Shippment shipment) 
+        public Invoice(int id, DateTime date, FromWarehouse  fromWarehouses,ToConsumer toConsumer, string typeInvoices, Shippment shipment, Goods goods) 
         {
             this.Id = id;
             this.DateTime = date;
-            this.FromWarehouse = fromWarehouse;
-            this.ToWarehouse = toWarehouse;
+            this.FromWarehouses = fromWarehouses;
             this.ToConsumer = toConsumer;
-            this.FromSupplier = fromSupplier;
             this.TypeInvoices = typeInvoices;
             this.Shipment = shipment;
-            
+            this.Goods = goods;
         }
 
         public override string ToString()
         {
-            return $"{Id}\t{DateTime}\t{FromWarehouse}\t{ToWarehouse}\t{ToWarehouse}\t{ToConsumer}\t{FromSupplier}\t{Shipment}";
+            return $"{Id}\t{DateTime}\t{ToConsumer}\t{TypeInvoices}\t{Shipment}\t{Goods}";
 
         }
     }

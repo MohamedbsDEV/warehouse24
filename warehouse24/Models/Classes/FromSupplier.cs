@@ -16,6 +16,7 @@ namespace warehouse24.Models.Classes
             this.Name = name;
 
         }
+
         public override string ToString( ) 
         {
             return $"{Id} {Name}\n";

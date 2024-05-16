@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
 namespace warehouse24.Models.Classes
 {
@@ -9,8 +10,8 @@ namespace warehouse24.Models.Classes
         public string  Name {  get; set; }
         public  double Cost {  get; set; }
         public Image Image { get; set; }
-    
 
+        public Goods() { }
         public Goods(int id, string name, double cost, Image image)
         {
             Id = id;
@@ -21,7 +22,7 @@ namespace warehouse24.Models.Classes
         }
         public override string ToString() 
         {
-            return $"{Id}   {Name}  {Cost} {Image}\n ";
+            return $"{Id}\t{Name}\t{Cost}\t";
         }
     }
 }

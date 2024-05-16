@@ -19,10 +19,11 @@ namespace warehouse24.Models.Classes
             this.Name = name;
             
         }
+        public Warehouse() { }
 
         public override string ToString() 
         {
-            return $"{Id}   {Name}\n ";
+            return $"{Id}   {Name}";
         }
     }
 }

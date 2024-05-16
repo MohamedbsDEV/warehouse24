@@ -1,6 +1,6 @@
 ﻿namespace warehouse24.DataBase
 {
-    partial class ShipmentCompany
+    partial class ShipmentCompanyForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,9 +34,6 @@
             this.butDeleteShipmentCompany = new System.Windows.Forms.Button();
             this.butBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shipmentcoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.warehouse24DataSet = new warehouse24.warehouse24DataSet();
             this.shipment_coTableAdapter = new warehouse24.warehouse24DataSetTableAdapters.Shipment_coTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,11 +43,14 @@
             this.numericUpDownId = new System.Windows.Forms.NumericUpDown();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.shipmentcoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shipmentcoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shipmentcoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // butAddShipmentCompany
@@ -58,7 +58,7 @@
             this.butAddShipmentCompany.BackColor = System.Drawing.Color.Transparent;
             this.butAddShipmentCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butAddShipmentCompany.FlatAppearance.BorderSize = 0;
-            this.butAddShipmentCompany.Location = new System.Drawing.Point(12, 393);
+            this.butAddShipmentCompany.Location = new System.Drawing.Point(7, 412);
             this.butAddShipmentCompany.Name = "butAddShipmentCompany";
             this.butAddShipmentCompany.Size = new System.Drawing.Size(183, 29);
             this.butAddShipmentCompany.TabIndex = 0;
@@ -71,7 +71,7 @@
             this.butEditShipmentCompany.BackColor = System.Drawing.Color.Transparent;
             this.butEditShipmentCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butEditShipmentCompany.FlatAppearance.BorderSize = 0;
-            this.butEditShipmentCompany.Location = new System.Drawing.Point(220, 393);
+            this.butEditShipmentCompany.Location = new System.Drawing.Point(215, 412);
             this.butEditShipmentCompany.Name = "butEditShipmentCompany";
             this.butEditShipmentCompany.Size = new System.Drawing.Size(183, 29);
             this.butEditShipmentCompany.TabIndex = 1;
@@ -84,7 +84,7 @@
             this.butDeleteShipmentCompany.BackColor = System.Drawing.Color.Transparent;
             this.butDeleteShipmentCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butDeleteShipmentCompany.FlatAppearance.BorderSize = 0;
-            this.butDeleteShipmentCompany.Location = new System.Drawing.Point(455, 393);
+            this.butDeleteShipmentCompany.Location = new System.Drawing.Point(450, 412);
             this.butDeleteShipmentCompany.Name = "butDeleteShipmentCompany";
             this.butDeleteShipmentCompany.Size = new System.Drawing.Size(183, 30);
             this.butDeleteShipmentCompany.TabIndex = 2;
@@ -97,7 +97,7 @@
             this.butBack.BackColor = System.Drawing.Color.Transparent;
             this.butBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butBack.FlatAppearance.BorderSize = 0;
-            this.butBack.Location = new System.Drawing.Point(23, 446);
+            this.butBack.Location = new System.Drawing.Point(14, 460);
             this.butBack.Name = "butBack";
             this.butBack.Size = new System.Drawing.Size(98, 23);
             this.butBack.TabIndex = 3;
@@ -118,24 +118,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(376, 255);
             this.dataGridView1.TabIndex = 4;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // shipmentcoBindingSource
-            // 
-            this.shipmentcoBindingSource.DataMember = "Shipment-co";
-            this.shipmentcoBindingSource.DataSource = this.warehouse24DataSet;
-            // 
             // warehouse24DataSet
             // 
             this.warehouse24DataSet.DataSetName = "warehouse24DataSet";
@@ -148,7 +130,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 332);
+            this.label1.Location = new System.Drawing.Point(11, 374);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 13);
             this.label1.TabIndex = 6;
@@ -156,7 +138,7 @@
             // 
             // textBoxNameShipmentCompany
             // 
-            this.textBoxNameShipmentCompany.Location = new System.Drawing.Point(146, 325);
+            this.textBoxNameShipmentCompany.Location = new System.Drawing.Point(146, 367);
             this.textBoxNameShipmentCompany.Name = "textBoxNameShipmentCompany";
             this.textBoxNameShipmentCompany.Size = new System.Drawing.Size(242, 20);
             this.textBoxNameShipmentCompany.TabIndex = 7;
@@ -174,7 +156,7 @@
             // labelId
             // 
             this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(491, 334);
+            this.labelId.Location = new System.Drawing.Point(112, 343);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(16, 13);
             this.labelId.TabIndex = 9;
@@ -182,7 +164,7 @@
             // 
             // numericUpDownId
             // 
-            this.numericUpDownId.Location = new System.Drawing.Point(525, 332);
+            this.numericUpDownId.Location = new System.Drawing.Point(146, 341);
             this.numericUpDownId.Name = "numericUpDownId";
             this.numericUpDownId.Size = new System.Drawing.Size(36, 20);
             this.numericUpDownId.TabIndex = 10;
@@ -203,7 +185,25 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(36, 17);
             this.toolStripStatusLabel1.Text = "read!!";
             // 
-            // ShipmentCompany
+            // shipmentcoBindingSource
+            // 
+            this.shipmentcoBindingSource.DataMember = "Shipment_co";
+            this.shipmentcoBindingSource.DataSource = this.warehouse24DataSet;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // ShipmentCompanyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,15 +219,15 @@
             this.Controls.Add(this.butDeleteShipmentCompany);
             this.Controls.Add(this.butEditShipmentCompany);
             this.Controls.Add(this.butAddShipmentCompany);
-            this.Name = "ShipmentCompany";
+            this.Name = "ShipmentCompanyForm";
             this.Text = "ShipmentCompany";
             this.Load += new System.EventHandler(this.ShipmentCompany_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shipmentcoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shipmentcoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,10 +241,7 @@
         private System.Windows.Forms.Button butBack;
         private System.Windows.Forms.DataGridView dataGridView1;
         private warehouse24DataSet warehouse24DataSet;
-        private System.Windows.Forms.BindingSource shipmentcoBindingSource;
         private warehouse24DataSetTableAdapters.Shipment_coTableAdapter shipment_coTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxNameShipmentCompany;
         private System.Windows.Forms.Label label2;
@@ -252,5 +249,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDownId;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource shipmentcoBindingSource;
     }
 }

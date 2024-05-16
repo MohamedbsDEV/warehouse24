@@ -10,16 +10,18 @@ namespace warehouse24.Models.Classes
     {
         public int Id {get;set;}
         public string Name {get;set;}
-        public FromWarehouse(int id, string name) 
 
+        public FromWarehouse(int id, string name) 
         {
             this.Id = id;
             this.Name = name;
-
         }
+
+        public FromWarehouse() { }
+        
         public override string ToString()
         {
-            return $"{Id}  {Name} \n";
+            return $"{Id}\t{Name}";
         
         }
 

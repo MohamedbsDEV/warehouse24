@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using warehouse24.Models.Classes;
+using warehouse24.Models.ORM;
 
 namespace warehouse24.DataBase
 {
@@ -16,6 +17,8 @@ namespace warehouse24.DataBase
         public GoodsForm()
         {
             InitializeComponent();
+            
+
         }
 
         private void Goods_Load(object sender, EventArgs e)
@@ -41,21 +44,22 @@ namespace warehouse24.DataBase
 
         private void butAddGoods_Click(object sender, EventArgs e)
         {
-            if (textBoxGoodsName.Text != "")
+            if (textBoxGoodsName.Text != "" && numericUpDownGoodCost.Value != 0)
             {
                 string newgoodsName = textBoxGoodsName.Text;
-
+                decimal newGoodsCost = numericUpDownGoodCost.Value;
                 ORM orm = new ORM();
-                orm.AddGoods(newgoodsName);
+                orm.AddGoods(newgoodsName,newGoodsCost);
                 toolStripStatusLabel1.Text = newgoodsName + "HaS BEEN ADD";
                 GoodsForm goods = new GoodsForm();
                 goods.StartPosition = FormStartPosition.CenterScreen;
+                this.goodsTableAdapter.Fill(this.warehouse24DataSet.Goods);
                 goods.Show();
                 this.Close();
             }
             else
             {
-                toolStripStatusLabel1.Text = "Please Add the Goods Name";
+                toolStripStatusLabel1.Text = "Please Add the Goods Name And Cost ";
             }
         }
 
@@ -71,6 +75,7 @@ namespace warehouse24.DataBase
                 GoodsForm goods = new GoodsForm();
                 goods.StartPosition = FormStartPosition.CenterScreen;
                 goods.Show();
+                this.goodsTableAdapter.Fill(this.warehouse24DataSet.Goods);
                 this.Close();
             }
             else
@@ -81,15 +86,17 @@ namespace warehouse24.DataBase
 
         private void butEditGoods_Click(object sender, EventArgs e)
         {
-            if (textBoxGoodsName.Text != "" && (int)numericUpDownId.Value != 0)
+            if (textBoxGoodsName.Text != "" && (int)numericUpDownId.Value != 0 && (int)numericUpDownGoodCost.Value != 0 )
             {
                 string newgoodsName = textBoxGoodsName.Text;
                 int idgoods = (int)numericUpDownId.Value;
+                float newgoodsCost = (float)numericUpDownGoodCost.Value;
                 ORM orm = new ORM();
-                orm.EditGoods(idgoods, newgoodsName);
+                orm.EditGoods(idgoods, newgoodsName,newgoodsCost);
                 toolStripStatusLabel1.Text = newgoodsName + "HaS BEEN Edit";
                 GoodsForm goods = new GoodsForm();
                 goods.StartPosition = FormStartPosition.CenterScreen;
+                this.goodsTableAdapter.Fill(this.warehouse24DataSet.Goods);
                 goods.Show();
                 this.Close();
             }
@@ -98,8 +105,10 @@ namespace warehouse24.DataBase
                 toolStripStatusLabel1.Text = "Please Add the Goods Name and ID";
             }
         }
+       
     }
+} 
 
        
     
-}
+

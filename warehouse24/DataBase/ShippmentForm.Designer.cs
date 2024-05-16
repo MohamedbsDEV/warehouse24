@@ -34,7 +34,7 @@
             this.butAddShippment = new System.Windows.Forms.Button();
             this.labelSHIPMENT = new System.Windows.Forms.Label();
             this.butBack = new System.Windows.Forms.Button();
-            this.dateTimePickerTimeShipment = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerTimeShippment = new System.Windows.Forms.DateTimePicker();
             this.labelTimeShipment = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,8 +46,6 @@
             this.shipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.warehouse24DataSet = new warehouse24.warehouse24DataSet();
             this.shipmentTableAdapter = new warehouse24.warehouse24DataSetTableAdapters.ShipmentTableAdapter();
-            this.textBoxTariff = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,11 +54,17 @@
             this.numericUpDownId = new System.Windows.Forms.NumericUpDown();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.numericUpDownTariff = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownCost = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxComID = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse24DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTariff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).BeginInit();
             this.SuspendLayout();
             // 
             // butEditShippment
@@ -74,7 +78,7 @@
             this.butEditShippment.TabIndex = 5;
             this.butEditShippment.Text = "Edit Shippment";
             this.butEditShippment.UseVisualStyleBackColor = false;
-            this.butEditShippment.Click += new System.EventHandler(this.butShippment_Click);
+            this.butEditShippment.Click += new System.EventHandler(this.butEditShippment_Click);
             // 
             // butDeleteShippment
             // 
@@ -126,12 +130,12 @@
             this.butBack.UseVisualStyleBackColor = false;
             this.butBack.Click += new System.EventHandler(this.butBack_Click);
             // 
-            // dateTimePickerTimeShipment
+            // dateTimePickerTimeShippment
             // 
-            this.dateTimePickerTimeShipment.Location = new System.Drawing.Point(119, 308);
-            this.dateTimePickerTimeShipment.Name = "dateTimePickerTimeShipment";
-            this.dateTimePickerTimeShipment.Size = new System.Drawing.Size(210, 20);
-            this.dateTimePickerTimeShipment.TabIndex = 12;
+            this.dateTimePickerTimeShippment.Location = new System.Drawing.Point(119, 308);
+            this.dateTimePickerTimeShippment.Name = "dateTimePickerTimeShippment";
+            this.dateTimePickerTimeShippment.Size = new System.Drawing.Size(210, 20);
+            this.dateTimePickerTimeShippment.TabIndex = 12;
             // 
             // labelTimeShipment
             // 
@@ -210,20 +214,6 @@
             // 
             this.shipmentTableAdapter.ClearBeforeFill = true;
             // 
-            // textBoxTariff
-            // 
-            this.textBoxTariff.Location = new System.Drawing.Point(476, 337);
-            this.textBoxTariff.Name = "textBoxTariff";
-            this.textBoxTariff.Size = new System.Drawing.Size(169, 20);
-            this.textBoxTariff.TabIndex = 17;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(476, 363);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 20);
-            this.textBox2.TabIndex = 18;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -257,6 +247,7 @@
             this.textBoxShippmentName.Name = "textBoxShippmentName";
             this.textBoxShippmentName.Size = new System.Drawing.Size(169, 20);
             this.textBoxShippmentName.TabIndex = 21;
+            this.textBoxShippmentName.TextChanged += new System.EventHandler(this.textBoxShippmentName_TextChanged);
             // 
             // labelId
             // 
@@ -290,11 +281,48 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel1.Text = "Read!!";
             // 
+            // numericUpDownTariff
+            // 
+            this.numericUpDownTariff.Location = new System.Drawing.Point(476, 340);
+            this.numericUpDownTariff.Name = "numericUpDownTariff";
+            this.numericUpDownTariff.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDownTariff.TabIndex = 26;
+            // 
+            // numericUpDownCost
+            // 
+            this.numericUpDownCost.Location = new System.Drawing.Point(476, 368);
+            this.numericUpDownCost.Name = "numericUpDownCost";
+            this.numericUpDownCost.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDownCost.TabIndex = 27;
+            // 
+            // comboBoxComID
+            // 
+            this.comboBoxComID.FormattingEnabled = true;
+            this.comboBoxComID.Location = new System.Drawing.Point(476, 395);
+            this.comboBoxComID.Name = "comboBoxComID";
+            this.comboBoxComID.Size = new System.Drawing.Size(140, 21);
+            this.comboBoxComID.TabIndex = 28;
+            this.comboBoxComID.SelectedIndexChanged += new System.EventHandler(this.comboBoxComID_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(386, 398);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Company ID";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // ShippmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 428);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBoxComID);
+            this.Controls.Add(this.numericUpDownCost);
+            this.Controls.Add(this.numericUpDownTariff);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.numericUpDownId);
             this.Controls.Add(this.labelId);
@@ -302,11 +330,9 @@
             this.Controls.Add(this.textBoxShippmentName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBoxTariff);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelTimeShipment);
-            this.Controls.Add(this.dateTimePickerTimeShipment);
+            this.Controls.Add(this.dateTimePickerTimeShippment);
             this.Controls.Add(this.butBack);
             this.Controls.Add(this.labelSHIPMENT);
             this.Controls.Add(this.butEditShippment);
@@ -321,6 +347,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownId)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTariff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,7 +361,7 @@
         private System.Windows.Forms.Button butAddShippment;
         private System.Windows.Forms.Label labelSHIPMENT;
         private System.Windows.Forms.Button butBack;
-        private System.Windows.Forms.DateTimePicker dateTimePickerTimeShipment;
+        private System.Windows.Forms.DateTimePicker dateTimePickerTimeShippment;
         private System.Windows.Forms.Label labelTimeShipment;
         private System.Windows.Forms.DataGridView dataGridView1;
         private warehouse24DataSet warehouse24DataSet;
@@ -345,8 +373,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tariffDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBoxTariff;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -355,5 +381,9 @@
         private System.Windows.Forms.NumericUpDown numericUpDownId;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.NumericUpDown numericUpDownTariff;
+        private System.Windows.Forms.NumericUpDown numericUpDownCost;
+        private System.Windows.Forms.ComboBox comboBoxComID;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -77,11 +77,11 @@
     <Compile Include="DataBase\ShippmentForm.Designer.cs">
       <DependentUpon>ShippmentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataBase\ShipmentCompany.cs">
+    <Compile Include="DataBase\ShipmentCompanyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DataBase\ShipmentCompany.Designer.cs">
-      <DependentUpon>ShipmentCompany.cs</DependentUpon>
+    <Compile Include="DataBase\ShipmentCompanyForm.Designer.cs">
+      <DependentUpon>ShipmentCompanyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase\SupplierForm.cs">
       <SubType>Form</SubType>
@@ -95,11 +95,11 @@
     <Compile Include="DataBase\WarehouseForm.Designer.cs">
       <DependentUpon>WarehouseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoices\InvoiceWindow.cs">
+    <Compile Include="Invoices\InvoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Invoices\InvoiceWindow.Designer.cs">
-      <DependentUpon>InvoiceWindow.cs</DependentUpon>
+    <Compile Include="Invoices\InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Classes\Consumer.cs" />
     <Compile Include="Models\Classes\FromSupplier.cs" />
@@ -107,6 +107,7 @@
     <Compile Include="Models\Classes\Goods.cs" />
     <Compile Include="Models\Classes\Invoice.cs" />
     <Compile Include="Models\Classes\Shippment.cs" />
+    <Compile Include="Models\Classes\ShippmentCompany.cs" />
     <Compile Include="Models\Classes\Supplier.cs" />
     <Compile Include="Models\Classes\ToConsumer.cs" />
     <Compile Include="Models\Classes\ToWarehouse.cs" />
@@ -127,11 +128,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ReportsWindows\ReportsWindow.cs">
+    <Compile Include="RportsForm\ReportsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportsWindows\ReportsWindow.Designer.cs">
-      <DependentUpon>ReportsWindow.cs</DependentUpon>
+    <Compile Include="RportsForm\ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="warehouse24DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -156,8 +157,8 @@
     <EmbeddedResource Include="DataBase\ShippmentForm.resx">
       <DependentUpon>ShippmentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataBase\ShipmentCompany.resx">
-      <DependentUpon>ShipmentCompany.cs</DependentUpon>
+    <EmbeddedResource Include="DataBase\ShipmentCompanyForm.resx">
+      <DependentUpon>ShipmentCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataBase\SupplierForm.resx">
       <DependentUpon>SupplierForm.cs</DependentUpon>
@@ -165,8 +166,8 @@
     <EmbeddedResource Include="DataBase\WarehouseForm.resx">
       <DependentUpon>WarehouseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoices\InvoiceWindow.resx">
-      <DependentUpon>InvoiceWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Invoices\InvoiceForm.resx">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -176,8 +177,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportsWindows\ReportsWindow.resx">
-      <DependentUpon>ReportsWindow.cs</DependentUpon>
+    <EmbeddedResource Include="RportsForm\ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

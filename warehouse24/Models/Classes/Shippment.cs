@@ -14,8 +14,7 @@ namespace warehouse24.Models.Classes
         public float Cost { get; set; }
         public DateTime Time { get; set; }
 
-
-
+        public ShippmentCompany Company { get; set; }   
         public Shippment(int id, string name, float tariff, float cost, DateTime time)
         {
             this.Id = id;
@@ -25,7 +24,7 @@ namespace warehouse24.Models.Classes
             this.Time = time;
         }
 
-        
+        public Shippment() { }  
         public override string ToString() 
         {
             return $"{Id}\t{Name}\t{Tariff}\t{Cost}\t{Time}";

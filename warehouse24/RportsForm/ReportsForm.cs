@@ -7,26 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace warehouse24.Invoices
+namespace warehouse24.ReportsWindows
 {
-    public partial class InvoiceWindow : Form
+    public partial class ReportsForm : Form
     {
-        public InvoiceWindow()
+        public ReportsForm()
+
         {
             InitializeComponent();
         }
-       
-       
+
         private void buttBack_Click(object sender, EventArgs e)
         {
             MainForm mainForm = (MainForm)Application.OpenForms["MainForm"];
-            if (mainForm != null)
+            if (mainForm != null) 
             {
                 mainForm.Show();
                 this.Close();
             }
+        }
+
+        private void butPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReportsForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using warehouse24.Models.Classes;
+using warehouse24.Models.ORM;
 
 namespace warehouse24.DataBase
 {
@@ -50,6 +51,7 @@ namespace warehouse24.DataBase
                 ConsumerForm consumer = new ConsumerForm();
                 consumer.StartPosition = FormStartPosition.CenterScreen;
                 consumer.Show();
+                this.consumerTableAdapter.Fill(this.warehouse24DataSet.Consumer);
                 this.Close();
             }
             else
@@ -70,6 +72,7 @@ namespace warehouse24.DataBase
                 ConsumerForm consumer = new ConsumerForm();
                 consumer.StartPosition = FormStartPosition.CenterScreen;
                 consumer.Show();
+                this.consumerTableAdapter.Fill(this.warehouse24DataSet.Consumer);
                 this.Close();
             }
             else
@@ -90,6 +93,7 @@ namespace warehouse24.DataBase
                 toolStripStatusLabel1.Text = newconsumerName + "HaS BEEN Edit";
                 ConsumerForm consumer = new ConsumerForm();
                 consumer.StartPosition = FormStartPosition.CenterScreen;
+                this.consumerTableAdapter.Fill(this.warehouse24DataSet.Consumer);
                 consumer.Show();
                 this.Close();
             }

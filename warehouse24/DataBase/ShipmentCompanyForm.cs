@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using warehouse24.Models.ORM;
 
 namespace warehouse24.DataBase
 {
-    public partial class ShipmentCompany : Form
+    public partial class ShipmentCompanyForm : Form
     {
-        public ShipmentCompany()
+        public ShipmentCompanyForm()
         {
             InitializeComponent();
         }
@@ -20,7 +21,7 @@ namespace warehouse24.DataBase
         private void ShipmentCompany_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'warehouse24DataSet._Shipment_co' table. You can move, or remove it, as needed.
-            this.shipment_coTableAdapter.Fill(this.warehouse24DataSet._Shipment_co);
+            this.shipment_coTableAdapter.Fill(this.warehouse24DataSet.Shipment_co);
 
         }
 
@@ -41,9 +42,10 @@ namespace warehouse24.DataBase
                 ORM orm = new ORM();
                 orm.AddWareHouse(newshipmentcompanyName);
                 toolStripStatusLabel1.Text = newshipmentcompanyName + "HaS BEEN ADD";
-                ShipmentCompany shipmentcompany = new ShipmentCompany();
+                ShipmentCompanyForm shipmentcompany = new ShipmentCompanyForm();
                 shipmentcompany.StartPosition = FormStartPosition.CenterScreen;
                 shipmentcompany.Show();
+                this.shipment_coTableAdapter.Fill(this.warehouse24DataSet.Shipment_co);
                 this.Close();
             }
             else
@@ -61,10 +63,12 @@ namespace warehouse24.DataBase
                 ORM orm = new ORM();
                 orm.DeleteWareHouse(newshipmentcompanyName);
                 toolStripStatusLabel1.Text = newshipmentcompanyName + "HaS BEEN Deleted";
-                ShipmentCompany shipmentcompany = new ShipmentCompany();
+                ShipmentCompanyForm shipmentcompany = new ShipmentCompanyForm();
                 shipmentcompany.StartPosition = FormStartPosition.CenterScreen;
                 shipmentcompany.Show();
+                this.shipment_coTableAdapter.Fill(this.warehouse24DataSet.Shipment_co);
                 this.Close();
+               
             }
             else
             {
@@ -81,9 +85,10 @@ namespace warehouse24.DataBase
                 ORM orm = new ORM();
                 orm.EditShipmentCompany(idshipmentcompany, newshipmentcompanyName);
                 toolStripStatusLabel1.Text = newshipmentcompanyName + "HaS BEEN Edit";
-                ShipmentCompany warehouse = new ShipmentCompany();
+                ShipmentCompanyForm warehouse = new ShipmentCompanyForm();
                 warehouse.StartPosition = FormStartPosition.CenterScreen;
                 warehouse.Show();
+                this.shipment_coTableAdapter.Fill(this.warehouse24DataSet.Shipment_co);
                 this.Close();
             }
             else

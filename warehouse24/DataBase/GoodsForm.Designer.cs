@@ -102,6 +102,7 @@
             this.butEditGoods.TabIndex = 2;
             this.butEditGoods.Text = "Edit Goods";
             this.butEditGoods.UseVisualStyleBackColor = true;
+            this.butEditGoods.Click += new System.EventHandler(this.butEditGoods_Click);
             // 
             // labelGOODS
             // 
@@ -256,6 +257,11 @@
             // numericUpDownGoodCost
             // 
             this.numericUpDownGoodCost.Location = new System.Drawing.Point(94, 312);
+            this.numericUpDownGoodCost.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDownGoodCost.Name = "numericUpDownGoodCost";
             this.numericUpDownGoodCost.Size = new System.Drawing.Size(57, 20);
             this.numericUpDownGoodCost.TabIndex = 19;

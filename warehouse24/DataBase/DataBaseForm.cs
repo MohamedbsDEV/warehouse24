@@ -54,7 +54,7 @@ namespace warehouse24
 
         private void butShipmentCom_Click(object sender, EventArgs e)
         {
-            ShowForm(typeof(ShipmentCompany));
+            ShowForm(typeof(ShipmentCompanyForm));
         }
 
         //methode to show window

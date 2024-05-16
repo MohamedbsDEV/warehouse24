@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using warehouse24.Models.ORM;
 
 namespace warehouse24.DataBase
 {
